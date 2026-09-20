@@ -1,0 +1,46 @@
+{
+  "schema_version": "bounded-retrieval-control-4",
+  "description": "检索目标与资源边界。维度门槛从锁定评价协议读取；基础发现预算与正式深检预算独立核算，本文件只控制检索预算和终止审计。",
+  "default_target_confidence": "中高",
+  "research_targets": {
+    "minimum_deduplicated_relevant_pages": 150,
+    "legacy_scored_evidence_floor": 100
+  },
+  "budgets": {
+    "baseline_query_budget": 120,
+    "baseline_independent_intent_budget": 120,
+    "baseline_attempt_budget": 144,
+    "baseline_retry_budget": 24,
+    "global_query_budget": 300,
+    "global_independent_intent_budget": 300,
+    "global_attempt_budget": 360,
+    "global_retry_budget": 60,
+    "total_retry_budget": 84,
+    "total_query_safety_limit": 504,
+    "per_round_query_budget": 60,
+    "per_round_independent_intent_budget": 60,
+    "per_round_attempt_budget": 72,
+    "per_round_retry_budget": 12,
+    "per_dimension_query_budget": 48,
+    "per_dimension_independent_intent_budget": 48,
+    "per_dimension_attempt_budget": 62,
+    "per_dimension_retry_budget": 14,
+    "per_round_per_dimension_independent_intent_budget": 10,
+    "per_round_per_dimension_attempt_budget": 13,
+    "per_round_per_dimension_retry_budget": 3,
+    "maximum_iteration_rounds": 5,
+    "minimum_targeted_queries_per_round": 8,
+    "minimum_medium_total_targeted_rounds": 5,
+    "minimum_medium_enhancement_rounds": 3,
+    "minimum_medium_enhancement_queries_per_round": 10,
+    "maximum_dimensions_per_shared_query": 3,
+    "maximum_controlled_retries_per_intent": 1,
+    "consecutive_low_gain_rounds": 2,
+    "repeated_source_failure_limit": 2
+  },
+  "execution_log_contract": {
+    "current_schema_version": "search-execution-2",
+    "legacy_schema_version": "legacy-search-log-1",
+    "legacy_state_cutoff_utc": "2026-09-04T00:00:00+00:00"
+  }
+}

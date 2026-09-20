@@ -1,0 +1,52 @@
+{
+  "schema_version": "controlled-platform-aliases-1",
+  "description": "经发布版本集中维护的平台主机、频道主机和既有内部名称映射。未知主机保持独立，不按注册主域猜测归并。",
+  "platforms": [
+    {
+      "platform_id": "ctrip",
+      "display_name": "携程",
+      "hosts": ["ctrip.com", "www.ctrip.com", "m.ctrip.com", "you.ctrip.com", "gs.ctrip.com", "pages.ctrip.com"],
+      "legacy_labels": ["携程", "携程旅行", "Ctrip"],
+      "rule_source": "发布版受控平台别名表"
+    },
+    {
+      "platform_id": "amap",
+      "display_name": "高德地图",
+      "hosts": ["amap.com", "www.amap.com", "m.amap.com", "maps.amap.com", "ditu.amap.com"],
+      "legacy_labels": ["高德", "高德地图", "Amap"],
+      "rule_source": "发布版受控平台别名表"
+    },
+    {
+      "platform_id": "meituan",
+      "display_name": "美团",
+      "hosts": ["meituan.com", "www.meituan.com", "m.meituan.com", "i.meituan.com"],
+      "legacy_labels": ["美团", "美团网", "Meituan"],
+      "rule_source": "发布版受控平台别名表"
+    },
+    {
+      "platform_id": "trip.com",
+      "display_name": "Trip.com（国际旅行平台）",
+      "hosts": ["trip.com", "www.trip.com", "cn.trip.com", "hk.trip.com", "sg.trip.com", "us.trip.com", "au.trip.com"],
+      "host_suffixes": [".trip.com"],
+      "legacy_labels": ["Trip.com", "Trip", "trip.com"],
+      "rule_source": "发布版受控平台别名表"
+    },
+    {
+      "platform_id": "baidu-maps",
+      "display_name": "百度地图",
+      "hosts": ["map.baidu.com", "maps.baidu.com", "j.map.baidu.com", "map.baidu.cn"],
+      "legacy_labels": ["百度地图", "Baidu Maps", "baidu-maps", "map.baidu.com"],
+      "rule_source": "发布版受控平台别名表"
+    },
+    {
+      "platform_id": "google-maps",
+      "display_name": "Google Maps（谷歌地图）",
+      "hosts": ["maps.google.com"],
+      "host_path_prefixes": ["google.com/maps"],
+      "legacy_labels": ["Google Maps", "google-maps"],
+      "rule_source": "发布版受控平台别名表"
+    }
+  ],
+  "platform_query_parameter_rules": {},
+  "scheme_equivalence_hosts": []
+}

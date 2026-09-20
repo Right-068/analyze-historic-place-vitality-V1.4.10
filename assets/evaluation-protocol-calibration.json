@@ -1,0 +1,179 @@
+{
+  "evaluation_protocol_version": "AHPV-7D-EP-1.1",
+  "semantic_codebook_version": "AHPV-SCB-1.0",
+  "released_at": "2026-08-14",
+  "change_class": "scoring_rule_change",
+  "queries": [
+    {
+      "query": "aspect based sentiment analysis official task methodology",
+      "executed_at": "2026-08-14",
+      "search_tool": "public web search",
+      "result_summary": "核验方面级对象、观点表达和极性应分层记录。"
+    },
+    {
+      "query": "rule based sentiment negation intensity contrast official implementation",
+      "executed_at": "2026-08-14",
+      "search_tool": "public web search",
+      "result_summary": "核验否定、程度、强调和转折等可解释上下文规则。"
+    },
+    {
+      "query": "rule based token matching terminology list official documentation",
+      "executed_at": "2026-08-14",
+      "search_tool": "public web search",
+      "result_summary": "核验词项表、规范化形式、词元边界和规则测试要求。"
+    },
+    {
+      "query": "dimensional aspect based sentiment analysis multilingual continuous score official paper",
+      "executed_at": "2026-08-14",
+      "search_tool": "public web search",
+      "result_summary": "核验方面级连续效价表达与分类标签的区别。"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "CAL-001",
+      "url": "https://aclanthology.org/S16-1002/",
+      "title": "SemEval-2016 Task 5: Aspect Based Sentiment Analysis",
+      "publisher": "Association for Computational Linguistics",
+      "retrieved_at": "2026-08-14",
+      "access_status": "full",
+      "method_area": "aspect-based sentiment analysis",
+      "finding": "方面级情感分析把评价对象或方面与意见极性建立明确关系，支持本规则库先归维度、后判极性的结构。"
+    },
+    {
+      "source_id": "CAL-002",
+      "url": "https://github.com/cjhutto/vaderSentiment",
+      "title": "VADER Sentiment Analysis",
+      "publisher": "VADER project",
+      "retrieved_at": "2026-08-14",
+      "access_status": "full",
+      "method_area": "lexicon and contextual rules",
+      "finding": "词典与可解释规则可结合否定、程度、强调和转折处理社交文本，但领域迁移仍需边界审计。"
+    },
+    {
+      "source_id": "CAL-003",
+      "url": "https://spacy.io/usage/rule-based-matching/",
+      "title": "Rule-based matching",
+      "publisher": "spaCy",
+      "retrieved_at": "2026-08-14",
+      "access_status": "full",
+      "method_area": "token and phrase matching",
+      "finding": "规则匹配应显式处理词元、规范化形式、短语边界和测试样例；未命中表达不应被强行赋值。"
+    },
+    {
+      "source_id": "CAL-004",
+      "url": "https://aclanthology.org/2026.semeval-1.452.pdf",
+      "title": "SemEval-2026 Task 3: Dimensional Aspect-Based Sentiment Analysis",
+      "publisher": "Association for Computational Linguistics",
+      "retrieved_at": "2026-08-14",
+      "access_status": "full",
+      "method_area": "continuous aspect-level valence",
+      "finding": "方面级连续效价能够表达分类极性以内的程度差异，但连续值仍需与具体方面、语种和领域边界绑定。"
+    }
+  ],
+  "decisions": [
+    {
+      "decision_id": "DEC-001",
+      "action": "retain",
+      "target": "方面归属与极性分离",
+      "rationale": "先识别七维方面，再计算该方面内部的极性和强度，避免整段总体情绪覆盖具体评价对象。",
+      "source_ids": ["CAL-001", "CAL-004"],
+      "affects_locked_codebook": false
+    },
+    {
+      "decision_id": "DEC-002",
+      "action": "retain",
+      "target": "双语词项加上下文规则",
+      "rationale": "保留中文、英文、近义释义、否定、程度、转折和反讽复核的透明路径，不用黑箱输出替代证据轨迹。",
+      "source_ids": ["CAL-002", "CAL-003"],
+      "affects_locked_codebook": false
+    },
+    {
+      "decision_id": "DEC-003",
+      "action": "modify",
+      "target": "规则更新生命周期",
+      "rationale": "把在线方法更新从单次地点任务前移到 Skill 发布校准；任务期只读锁定协议，以保证跨任务可比性并防止临时漂移。",
+      "source_ids": ["CAL-001", "CAL-002", "CAL-003", "CAL-004"],
+      "affects_locked_codebook": false
+    },
+    {
+      "decision_id": "DEC-004",
+      "action": "retain",
+      "target": "零命中编码解析与复核队列",
+      "rationale": "无法从双语词表取得完整结果时启动编码解析；候选只进入任务复核队列，不在任务中修改锁定词表或直接计分。",
+      "source_ids": ["CAL-001", "CAL-003"],
+      "affects_locked_codebook": false
+    },
+    {
+      "decision_id": "DEC-005",
+      "action": "modify",
+      "target": "正式评分证据数据链一致性",
+      "rationale": "修复实现中主题标签宽口径统计与主维度正式计分口径混用的问题；正式评分只按主维度归属，分离检索、候选和实际计分证据，并保留既有平台最低样本规则、七维尺度、权重和聚合方法。该缺陷修复不改变语义词表、极性规则、分值映射或任务期只读政策。",
+      "source_ids": ["CAL-001", "CAL-003"],
+      "affects_locked_codebook": false
+    }
+  ],
+  "formal_scoring": {
+    "schema_version": "formal-scoring-chain-1",
+    "dimension_assignment_field": "primary_dimension",
+    "topic_coverage_field": "dimension_tags",
+    "dimension_tags_role": "theme_coverage_only_not_formal_scoring",
+    "multi_dimension_text_policy": "split_into_independent_evidence_units_with_unique_evidence_id_and_one_primary_dimension_each",
+    "deduplication_scope": "one_dedup_group_once_within_each_primary_dimension",
+    "deduplication_key_priority": ["dedup_group", "evidence_id"],
+    "eligible_unit_types": ["page_body", "user_post", "user_review", "comment", "reply"],
+    "prohibited_semantic_methods": ["coding_parse_fallback", "not_applicable", ""],
+    "count_fields": {
+      "retrieved": "retrieved_evidence_units",
+      "topic_coverage": "topic_coverage_evidence_units",
+      "eligible": "eligible_evidence_units",
+      "scored": "scored_evidence_units"
+    },
+    "platform_dimension": {
+      "minimum_dimension_units": 3,
+      "scored_status": "scored",
+      "insufficient_status": "insufficient_platform_samples"
+    },
+    "tendency_conversion": {
+      "formula": "(tendency + 5) * 10",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "platform_aggregation": {
+      "platform_equal_method": "arithmetic_mean",
+      "sample_weighted_method": "effective_scored_samples_with_cap",
+      "sample_weight_cap": 0.5,
+      "minimum_platform_effective_samples": 5,
+      "all_small_platform_exception": true
+    },
+    "composite_formula": "S = 0.15H + 0.15L + 0.20C + 0.15P + 0.10A + 0.15R + 0.10G",
+    "dimension_confidence_basis": "scored_evidence_units_and_scored_source_breadth",
+    "dimension_confidence_thresholds": {
+      "中": {
+        "scored_evidence_units": 25,
+        "distinct_source_pages": 12,
+        "source_categories": 3,
+        "scorable_platforms": 1
+      },
+      "中高": {
+        "scored_evidence_units": 40,
+        "distinct_source_pages": 20,
+        "source_categories": 4,
+        "scorable_platforms": 1
+      },
+      "高": {
+        "scored_evidence_units": 60,
+        "distinct_source_pages": 30,
+        "source_categories": 5,
+        "scorable_platforms": 1
+      }
+    }
+  },
+  "codebook_patch": {},
+  "release_review": {
+    "method_review_status": "approved",
+    "regression_status": "passed",
+    "benchmark_status": "passed",
+    "review_summary": "沿用既有发布前方法校准与任务期只读协议；本次仅修复正式评分证据资格、主维度归属、平台最低样本传导和独立复算验收的数据链一致性，不改变七维体系、权重、分值映射或平台聚合方法。自动化回归、异常模式基准和 Office 联合验收作为发布门禁执行并通过。"
+  }
+}

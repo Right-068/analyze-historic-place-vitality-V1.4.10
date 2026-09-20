@@ -1,0 +1,53 @@
+{
+  "task_run_id": "${TASK_RUN_ID}",
+  "query_id": "${QUERY_ID}",
+  "query": "${ACTUAL_QUERY}",
+  "execution_id": "${EXECUTION_ID}",
+  "plan_id": "${COMMITTED_PLAN_ID}",
+  "query_definition_sha256": "${QUERY_DEFINITION_SHA256}",
+  "plan_row_sha256": "${PLAN_ROW_SHA256}",
+  "execution_binding_sha256": "${EXECUTION_BINDING_SHA256}",
+  "normalized_query_intent": "${NORMALIZED_QUERY_INTENT}",
+  "query_dimension_targets": "${QUERY_DIMENSION_TARGETS_JSON}",
+  "planned_iteration_round": "${PLANNED_ITERATION_ROUND}",
+  "iteration_round": "${ACTUAL_ITERATION_ROUND}",
+  "iteration_mode": "${ITERATION_MODE}",
+  "gap_target": "${GAP_TARGET}",
+  "target_confidence": "${TARGET_CONFIDENCE}",
+  "dimension_confidence_before_round": "${DIMENSION_CONFIDENCE_BEFORE_ROUND}",
+  "audit_snapshot_sha256": "${AUDIT_SNAPSHOT_SHA256}",
+  "plan_binding_sha256": "${PLAN_BINDING_SHA256}",
+  "url": "${ACTUAL_REQUEST_URL}",
+  "page_title": "公开页面标题",
+  "retrieved_at": "${ISO_8601_TIME}",
+  "access_status": "full",
+  "source_type": "user_review",
+  "content_layer": "user_review",
+  "visible_body": "本次工具实际读取到的完整可见文本",
+  "visible_blocks": [
+    {
+      "block_id": "B001",
+      "block_type": "user_review",
+      "start": 0,
+      "end": 16,
+      "is_user_generated": true
+    }
+  ],
+  "native_numeric_observation": {},
+  "capture_tool": "${RUNTIME_RETRIEVAL_TOOL}",
+  "capture_notes": "仅记录实际读取结果，不作正式评价判断",
+  "final_url": "${ACTUAL_FINAL_URL}",
+  "published_at": "",
+  "research_cutoff": "",
+  "tool_trace": {
+    "schema_version": "tool-page-trace-1",
+    "tool_name": "${RUNTIME_PAGE_READ_TOOL}",
+    "tool_call_id": "",
+    "result_ref": "",
+    "request_url": "${ACTUAL_REQUEST_URL}",
+    "final_url": "${ACTUAL_FINAL_URL}",
+    "page_title": "公开页面标题",
+    "retrieved_at": "${ISO_8601_TIME}",
+    "body_format": "text/plain"
+  }
+}

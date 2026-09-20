@@ -1,0 +1,15 @@
+{
+  "schema_version": "report-truth-1",
+  "status": "由 compile_report_truth.py 生成",
+  "task_run_id": "",
+  "page_count": 0,
+  "source_count": 0,
+  "user_source_count": 0,
+  "raw_evidence_units": 0,
+  "eligible_evidence_units": 0,
+  "scored_evidence_units": 0,
+  "dimensions": [],
+  "result_layer": {},
+  "input_hashes": {},
+  "report_truth_sha256": ""
+}

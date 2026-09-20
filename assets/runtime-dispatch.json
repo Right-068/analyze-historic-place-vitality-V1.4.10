@@ -1,0 +1,10 @@
+{
+  "schema_version": "runtime-dispatch-1",
+  "default_window_size": 6,
+  "minimum_window_size": 4,
+  "maximum_window_size": 8,
+  "healthy_windows_to_expand": 2,
+  "failed_windows_to_reduce": 2,
+  "local_repair_attempts": 2,
+  "purpose": "Execution load only. Does not override retrieval budgets, evidence gates or evaluation parameters."
+}

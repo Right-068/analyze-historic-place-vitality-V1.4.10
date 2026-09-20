@@ -1,0 +1,6 @@
+interface:
+  display_name: "历史文化地点网络活力分析"
+  short_description: "公开网络证据研究、七维活力评价与正式成果交付"
+  default_prompt: "使用 $analyze-historic-place-vitality 开展独立网络证据研究；执行编排器当前动作和适配器合同，程序整理查询、页面及机器字段，局部错误按 SOFT_RETRY 处理；TURN_CHECKPOINT 后恢复同一运行，不等于完成。正式写入、评分和成果必须经发布脚本及许可链，不手写台账或分数。"
+policy:
+  allow_implicit_invocation: true

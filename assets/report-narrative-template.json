@@ -1,0 +1,26 @@
+{
+  "schema_version": "report-narrative-1",
+  "task_run_id": "${TASK_RUN_ID}",
+  "generation_round": 1,
+  "sections": {
+    "1": [], "2": [], "3": [], "4": [], "5": [],
+    "6": [], "7": [], "8": [], "9": [], "10": [],
+    "11": [], "12": [], "13": [], "14": [], "15": []
+  },
+  "dimensions": {
+    "历史文化感知": {},
+    "在地文化特征": {},
+    "生活文化延续": {},
+    "文化实践体验": {},
+    "场所氛围体验": {},
+    "保护活化感知": {},
+    "承载治理体验": {}
+  },
+  "result_interpretation": {
+    "core_strengths": [],
+    "core_risks": [],
+    "bottom_line_issues": []
+  },
+  "qualitative_tables": {"7": [], "8": [], "10": [], "11": []},
+  "platform_interpretations": []
+}

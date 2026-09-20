@@ -1,0 +1,8 @@
+{
+  "capture": ["source-capture-manifest.jsonl", "source_snapshots/"],
+  "staging": ["candidate_sources.jsonl", "candidate_evidence.jsonl"],
+  "canonical": ["canonical-source-ledger.csv", "canonical-evidence-ledger.csv", "correction-events.jsonl", "active-source-ledger.csv", "active-evidence-ledger.csv"],
+  "derived": ["semantic-evidence.csv", "formal-scoring-evidence.csv", "platform-scores.json", "composite-scores.json", "report_truth.json", "report_narrative.json", "report_data.json"],
+  "audit": ["pre-admission-audit.json", "locator-audit.json", "collision-audit.json", "evidence-audit.json", "truth-freeze-manifest.json", "pre-report-preflight.json", "validation-error-manifest.json"],
+  "artifacts": ["历史文化活力分析报告.docx", "网络检索与量化编码.xlsx", "非量化文本量化评价规则.xlsx", "详细运行日志.txt"]
+}

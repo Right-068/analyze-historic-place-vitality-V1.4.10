@@ -1,0 +1,1365 @@
+{
+  "method_id": "transparent_semantic_quantification",
+  "languages": [
+    "zh",
+    "en",
+    "mixed"
+  ],
+  "lexicon_schema": {
+    "concept_key": "concept_id",
+    "surface_fields": [
+      "terms.zh",
+      "terms.en",
+      "near_synonyms.zh",
+      "near_synonyms.en"
+    ],
+    "definition_fields": [
+      "gloss.zh",
+      "gloss.en"
+    ],
+    "matching_order": [
+      "surface_term",
+      "near_synonym",
+      "gloss_profile",
+      "coding_parse"
+    ],
+    "notes": "词项、近义表达和释义均按语言分栏；概念编号、极性、维度编号、权重与释义字段可由机器直接读取。"
+  },
+  "purpose": "将缺少原生数值的公开网络文字转化为可复核的七维主题、倾向、强度与置信度字段，并支持独立形成历史文化活态传承感知评价结果层；所有参数均为本研究工作流的操作性规则，不是普适心理量表。",
+  "score_scale": {
+    "minimum": -5,
+    "maximum": 5,
+    "neutral_band": 0.5,
+    "normalization_alpha": 15.0,
+    "formula": "5 * raw / sqrt(raw^2 + normalization_alpha)"
+  },
+  "thresholds": {
+    "minimum_text_characters": 6,
+    "minimum_dimension_hits": 1,
+    "dimension_auto_confidence": 0.6,
+    "semantic_auto_confidence": 0.72,
+    "minimum_evidence_reliability": 0.55,
+    "minimum_dimension_units": 3,
+    "mixed_minimum_absolute_contribution": 1.0,
+    "mixed_secondary_share": 0.35,
+    "low_confidence_review": 0.72,
+    "coding_parse_candidate_similarity": 0.12,
+    "coding_parse_strong_similarity": 0.28,
+    "coding_parse_max_candidates_per_type": 3
+  },
+  "scope": {
+    "negation_window_characters": 6,
+    "degree_window_characters": 6,
+    "hedge_window_characters": 10,
+    "punctuation_amplification_per_mark": 0.08,
+    "punctuation_amplification_cap": 1.24,
+    "contrast_before_weight": 0.75,
+    "contrast_after_weight": 1.25,
+    "hedge_weight": 0.75
+  },
+  "negators": [
+    "并不是",
+    "并非",
+    "不算",
+    "不太",
+    "不能",
+    "不会",
+    "没有",
+    "没能",
+    "未能",
+    "难以",
+    "毫无",
+    "不",
+    "没",
+    "未",
+    "无",
+    "not",
+    "never",
+    "no",
+    "without",
+    "hardly",
+    "barely",
+    "neither",
+    "nor"
+  ],
+  "contrast_markers": [
+    "但是",
+    "不过",
+    "然而",
+    "可是",
+    "可惜",
+    "相反",
+    "只是",
+    "但",
+    "却",
+    "but",
+    "however",
+    "although",
+    "though",
+    "yet",
+    "nevertheless",
+    "on the other hand"
+  ],
+  "hedges": [
+    "不太确定",
+    "不一定",
+    "未必",
+    "可能",
+    "或许",
+    "似乎",
+    "大概",
+    "感觉",
+    "有点",
+    "好像",
+    "据说",
+    "个人觉得",
+    "maybe",
+    "perhaps",
+    "possibly",
+    "probably",
+    "seems",
+    "appears",
+    "I think",
+    "in my view",
+    "a little",
+    "somewhat"
+  ],
+  "sarcasm_or_figurative_cues": [
+    "呵呵",
+    "就这",
+    "可真",
+    "真是绝了",
+    "所谓",
+    "名不副实",
+    "无语",
+    "笑死",
+    "反讽",
+    "讽刺",
+    "yeah right",
+    "so-called",
+    "what a joke",
+    "as if",
+    "sarcasm",
+    "ironic"
+  ],
+  "degree_modifiers": {
+    "1.5": [
+      "极其",
+      "极为",
+      "非常",
+      "特别",
+      "超级",
+      "十分",
+      "格外",
+      "太过",
+      "真的很",
+      "extremely",
+      "exceptionally",
+      "incredibly",
+      "absolutely",
+      "very"
+    ],
+    "1.25": [
+      "很",
+      "相当",
+      "颇为",
+      "明显",
+      "挺",
+      "比较",
+      "较为",
+      "quite",
+      "rather",
+      "clearly",
+      "really"
+    ],
+    "0.7": [
+      "稍微",
+      "略微",
+      "有些",
+      "有一点",
+      "有点",
+      "slightly",
+      "somewhat",
+      "a little"
+    ],
+    "0.5": [
+      "勉强",
+      "不算太",
+      "谈不上",
+      "barely",
+      "hardly"
+    ]
+  },
+  "positive_lexicon": {
+    "愿意再来": 3.0,
+    "还会再来": 3.0,
+    "强烈推荐": 3.0,
+    "原汁原味": 2.5,
+    "保存完好": 2.5,
+    "保留完整": 2.5,
+    "印象深刻": 2.5,
+    "很有历史感": 2.5,
+    "有文化底蕴": 2.5,
+    "惊喜": 2.3,
+    "精彩": 2.2,
+    "有特色": 2.1,
+    "值得": 2.0,
+    "推荐": 2.0,
+    "喜欢": 2.0,
+    "满意": 2.0,
+    "好逛": 2.0,
+    "体验丰富": 2.0,
+    "贴心": 1.9,
+    "漂亮": 1.8,
+    "好看": 1.8,
+    "舒服": 1.8,
+    "整洁": 1.7,
+    "便利": 1.6,
+    "方便": 1.6,
+    "丰富": 1.6,
+    "有序": 1.5,
+    "友好": 1.5,
+    "不错": 1.5,
+    "清晰": 1.3,
+    "合理": 1.2,
+    "适合": 1.2,
+    "可达": 1.2,
+    "尚可": 0.6
+  },
+  "negative_lexicon": {
+    "过度商业化": 3.0,
+    "商业味太重": 3.0,
+    "名不副实": 3.0,
+    "假古董": 3.0,
+    "宰客": 3.0,
+    "强烈不推荐": 3.0,
+    "千篇一律": 2.6,
+    "失望": 2.6,
+    "踩雷": 2.6,
+    "失真": 2.5,
+    "脏乱": 2.5,
+    "同质化": 2.4,
+    "不推荐": 2.4,
+    "体验很差": 2.4,
+    "停车难": 2.2,
+    "指引不清": 2.2,
+    "排队时间长": 2.2,
+    "收费高": 2.1,
+    "价格高": 2.0,
+    "人太多": 2.0,
+    "难走": 2.0,
+    "无聊": 2.0,
+    "拥挤": 1.9,
+    "体验较差": 1.9,
+    "无障碍不足": 1.8,
+    "噪音大": 1.8,
+    "混乱": 1.8,
+    "单调": 1.7,
+    "缺少": 1.6,
+    "不足": 1.5,
+    "贵": 1.4,
+    "一般": 0.6
+  },
+  "neutral_cues": [
+    "未作评价",
+    "仅作介绍",
+    "客观记录",
+    "无明显倾向",
+    "信息说明",
+    "no opinion",
+    "for information only",
+    "factual description",
+    "neutral account"
+  ],
+  "promotion_cues": [
+    "限时优惠",
+    "立即购买",
+    "扫码咨询",
+    "团购链接",
+    "官方推荐",
+    "推广合作",
+    "商务合作",
+    "领取优惠",
+    "点击下单",
+    "limited-time offer",
+    "buy now",
+    "sponsored",
+    "paid partnership",
+    "affiliate link",
+    "book now"
+  ],
+  "polarity_concepts": [
+    {
+      "concept_id": "positive_revisit_intent",
+      "polarity": "positive",
+      "weight": 3.0,
+      "terms": {
+        "zh": [
+          "愿意再来",
+          "还会再来"
+        ],
+        "en": [
+          "would visit again",
+          "would come back",
+          "will return"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "愿意重游",
+          "想再次到访",
+          "值得二刷"
+        ],
+        "en": [
+          "revisit",
+          "return visit",
+          "come back again"
+        ]
+      },
+      "gloss": {
+        "zh": "明确表达未来再次到访、重游或重复体验的积极意愿。",
+        "en": "Expresses a positive intention to revisit, return, or repeat the experience."
+      }
+    },
+    {
+      "concept_id": "positive_recommendation",
+      "polarity": "positive",
+      "weight": 2.7,
+      "terms": {
+        "zh": [
+          "强烈推荐",
+          "推荐",
+          "值得"
+        ],
+        "en": [
+          "highly recommend",
+          "recommend",
+          "worth visiting"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "值得一去",
+          "值得专程来",
+          "不虚此行"
+        ],
+        "en": [
+          "well worth it",
+          "a must visit",
+          "worth the trip"
+        ]
+      },
+      "gloss": {
+        "zh": "对到访价值作出积极判断，并建议他人将其纳入行程。",
+        "en": "Evaluates the visit positively and advises others to include it in their trip."
+      }
+    },
+    {
+      "concept_id": "positive_expectation_exceeded",
+      "polarity": "positive",
+      "weight": 2.4,
+      "terms": {
+        "zh": [
+          "惊喜",
+          "印象深刻"
+        ],
+        "en": [
+          "pleasant surprise",
+          "impressive",
+          "memorable"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "超出预期",
+          "眼前一亮",
+          "比想象中好"
+        ],
+        "en": [
+          "exceeded expectations",
+          "better than expected",
+          "surprisingly good"
+        ]
+      },
+      "gloss": {
+        "zh": "体验高于原有预期，产生惊喜、深刻印象或明显积极落差。",
+        "en": "The experience exceeded what was hoped for or expected and created a memorable positive surprise."
+      }
+    },
+    {
+      "concept_id": "positive_authentic_character",
+      "polarity": "positive",
+      "weight": 2.5,
+      "terms": {
+        "zh": [
+          "原汁原味",
+          "有文化底蕴",
+          "很有历史感",
+          "有特色"
+        ],
+        "en": [
+          "authentic",
+          "full of character",
+          "rich in history",
+          "distinctive"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "有老城味道",
+          "地方味浓",
+          "保有历史气息"
+        ],
+        "en": [
+          "sense of place",
+          "historic atmosphere",
+          "local character"
+        ]
+      },
+      "gloss": {
+        "zh": "肯定历史氛围、在地特征、文化厚度或非标准化的地方感。",
+        "en": "Affirms historic atmosphere, local identity, cultural depth, or a distinctive sense of place."
+      }
+    },
+    {
+      "concept_id": "positive_comfort_convenience",
+      "polarity": "positive",
+      "weight": 1.5,
+      "terms": {
+        "zh": [
+          "舒服",
+          "整洁",
+          "便利",
+          "方便",
+          "有序",
+          "友好"
+        ],
+        "en": [
+          "comfortable",
+          "clean",
+          "convenient",
+          "easy to reach",
+          "well organized",
+          "friendly"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "体验顺畅",
+          "使用方便",
+          "环境舒适"
+        ],
+        "en": [
+          "easy to use",
+          "pleasant environment",
+          "smooth experience"
+        ]
+      },
+      "gloss": {
+        "zh": "肯定环境舒适度、整洁度、服务友好度或设施与交通的便利程度。",
+        "en": "Approves of comfort, cleanliness, friendliness, or the convenience of facilities and access."
+      }
+    },
+    {
+      "concept_id": "negative_overcommercialization",
+      "polarity": "negative",
+      "weight": 3.0,
+      "terms": {
+        "zh": [
+          "过度商业化",
+          "商业味太重",
+          "同质化",
+          "千篇一律"
+        ],
+        "en": [
+          "over-commercialized",
+          "too commercial",
+          "generic",
+          "homogenized"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "商业气息压过文化",
+          "到处都一样",
+          "连锁化严重"
+        ],
+        "en": [
+          "commercialization overwhelms the culture",
+          "could be anywhere",
+          "chain-store dominated"
+        ]
+      },
+      "gloss": {
+        "zh": "认为商业开发、连锁业态或复制化表达削弱了历史文化体验与地方差异。",
+        "en": "Commercial development, chain retail, or copy-paste design is perceived to overwhelm culture and local distinctiveness."
+      }
+    },
+    {
+      "concept_id": "negative_inauthenticity",
+      "polarity": "negative",
+      "weight": 2.8,
+      "terms": {
+        "zh": [
+          "名不副实",
+          "假古董",
+          "失真",
+          "仿古"
+        ],
+        "en": [
+          "inauthentic",
+          "fake heritage",
+          "artificial",
+          "not as advertised"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "像人造景区",
+          "缺少真实生活",
+          "历史感是包装出来的"
+        ],
+        "en": [
+          "staged for tourists",
+          "manufactured history",
+          "lacks real local life"
+        ]
+      },
+      "gloss": {
+        "zh": "质疑文化表达、历史叙事或空间风貌的真实性，认为体验经过包装或表演化。",
+        "en": "Questions the authenticity of heritage, historical narratives, or local life and sees the experience as staged or manufactured."
+      }
+    },
+    {
+      "concept_id": "negative_disappointment",
+      "polarity": "negative",
+      "weight": 2.6,
+      "terms": {
+        "zh": [
+          "失望",
+          "踩雷",
+          "不推荐",
+          "体验很差"
+        ],
+        "en": [
+          "disappointing",
+          "would not recommend",
+          "poor experience",
+          "regretted visiting"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "低于预期",
+          "不值得来",
+          "白跑一趟"
+        ],
+        "en": [
+          "below expectations",
+          "not worth the trip",
+          "waste of time"
+        ]
+      },
+      "gloss": {
+        "zh": "体验低于预期，产生后悔、失望或明确劝阻他人到访的判断。",
+        "en": "The experience fell below expectations and led to regret, disappointment, or advice against visiting."
+      }
+    },
+    {
+      "concept_id": "negative_crowding_management",
+      "polarity": "negative",
+      "weight": 2.0,
+      "terms": {
+        "zh": [
+          "人太多",
+          "拥挤",
+          "排队时间长",
+          "混乱",
+          "噪音大"
+        ],
+        "en": [
+          "too crowded",
+          "long queues",
+          "chaotic",
+          "too noisy",
+          "overcrowded"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "寸步难行",
+          "秩序失控",
+          "被人流淹没"
+        ],
+        "en": [
+          "packed shoulder to shoulder",
+          "crowd control was poor",
+          "overrun by visitors"
+        ]
+      },
+      "gloss": {
+        "zh": "指出高客流、排队、噪声或现场秩序降低了游览舒适度与安全感。",
+        "en": "Crowds, queues, noise, or weak on-site management reduced comfort, mobility, or perceived safety."
+      }
+    },
+    {
+      "concept_id": "negative_access_facilities",
+      "polarity": "negative",
+      "weight": 2.0,
+      "terms": {
+        "zh": [
+          "停车难",
+          "指引不清",
+          "无障碍不足",
+          "难走",
+          "缺少",
+          "不足"
+        ],
+        "en": [
+          "hard to park",
+          "poor signage",
+          "not accessible",
+          "hard to walk",
+          "lacking",
+          "insufficient"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "找不到入口",
+          "设施不够用",
+          "通行不便"
+        ],
+        "en": [
+          "difficult to navigate",
+          "facilities were inadequate",
+          "access was inconvenient"
+        ]
+      },
+      "gloss": {
+        "zh": "交通、导向、步行条件、无障碍或公共设施不足，形成实际使用障碍。",
+        "en": "Access, wayfinding, walkability, accessibility, or public facilities were inadequate and created practical barriers."
+      }
+    }
+  ],
+  "dimensions": [
+    {
+      "dimension_id": "historical_cultural_perception",
+      "name": "历史文化感知",
+      "name_en": "Historical and cultural perception",
+      "cues": [
+        "历史价值",
+        "文化底蕴",
+        "历史沿革",
+        "历史事件",
+        "历史人物",
+        "典故",
+        "地名故事",
+        "遗址",
+        "文物建筑",
+        "传统格局",
+        "城市记忆",
+        "文化叙事",
+        "遗产讲解",
+        "文化导览",
+        "历史获得感"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "历史价值",
+          "文化底蕴",
+          "历史沿革",
+          "历史事件",
+          "人物故事",
+          "遗产资源",
+          "城市记忆",
+          "文化导览"
+        ],
+        "en": [
+          "historical value",
+          "cultural depth",
+          "historical evolution",
+          "historic event",
+          "local story",
+          "heritage resource",
+          "urban memory",
+          "heritage interpretation"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "历史脉络",
+          "过去的痕迹",
+          "文化积淀",
+          "老城记忆",
+          "看懂历史",
+          "文化获得感"
+        ],
+        "en": [
+          "sense of the past",
+          "layers of history",
+          "cultural legacy",
+          "memory of the old city",
+          "understanding heritage",
+          "cultural learning"
+        ]
+      },
+      "gloss": {
+        "zh": "公众对街区历史价值、文化底蕴、事件、人物、遗产、城市记忆和文化叙事的识别、理解、记忆及情感反应。",
+        "en": "Public recognition, understanding, memory, and emotional response concerning historical value, cultural depth, events, people, heritage, urban memory, and cultural narratives."
+      },
+      "boundary": {
+        "zh": "判断公众是否知晓并理解文化意义；客观资源存在而未被感知时不能直接作为正向感知证据。",
+        "en": "Assess whether cultural meaning is perceived and understood; the mere existence of heritage is not positive perception evidence."
+      }
+    },
+    {
+      "dimension_id": "local_cultural_character",
+      "name": "在地文化特征",
+      "name_en": "Local cultural character",
+      "cues": [
+        "地方特色",
+        "地域文化",
+        "本地文化",
+        "地方辨识度",
+        "文化真实性",
+        "本地语言",
+        "地方饮食",
+        "地方习俗",
+        "本土生活方式",
+        "老字号",
+        "传统商业",
+        "不可替代",
+        "千街一面",
+        "连锁化",
+        "网红化",
+        "符号化",
+        "仿古化"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "地方特色",
+          "地域文化",
+          "文化真实性",
+          "地方辨识度",
+          "本地语言",
+          "地方饮食",
+          "老字号",
+          "千街一面"
+        ],
+        "en": [
+          "local character",
+          "regional culture",
+          "cultural authenticity",
+          "place distinctiveness",
+          "local language",
+          "local cuisine",
+          "time-honored local shop",
+          "generic commercial street"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "当地自己的文化",
+          "本土味道",
+          "地方个性",
+          "不可复制",
+          "文化同质化",
+          "商业包装"
+        ],
+        "en": [
+          "culture of the place",
+          "local identity",
+          "place-specific character",
+          "irreplaceable local expression",
+          "cultural homogenization",
+          "commercialized symbolism"
+        ]
+      },
+      "gloss": {
+        "zh": "街区文化与本地历史、地域文化、生活方式和社会环境的独特联系，以及公众对地方辨识度、真实性和不可替代性的感知。",
+        "en": "The distinctive connection between cultural expression and local history, regional culture, ways of life, and social context, as perceived through authenticity and place distinctiveness."
+      },
+      "boundary": {
+        "zh": "关注文化是否属于当地并具有独特性；真实主体是否持续实践归入生活文化延续。",
+        "en": "Focus on whether culture is locally distinctive; continued practice by real actors belongs to living cultural continuity."
+      }
+    },
+    {
+      "dimension_id": "living_cultural_continuity",
+      "name": "生活文化延续",
+      "name_en": "Living cultural continuity",
+      "cues": [
+        "原住民",
+        "长期居民",
+        "街坊",
+        "社区关系",
+        "邻里交往",
+        "居民日常",
+        "持续经营",
+        "传统店铺",
+        "老字号经营",
+        "传统业态",
+        "传统市场",
+        "市井生活",
+        "生活方式延续",
+        "生产方式延续",
+        "居民流失",
+        "生活空间旅游化",
+        "文化空心化",
+        "只剩景观"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "原住民",
+          "居民日常",
+          "邻里交往",
+          "持续经营",
+          "传统业态",
+          "市井生活",
+          "居民流失",
+          "文化空心化"
+        ],
+        "en": [
+          "long-term resident",
+          "everyday local life",
+          "neighborhood ties",
+          "continuous operation",
+          "traditional trade",
+          "street life",
+          "resident displacement",
+          "cultural hollowing-out"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "真实生活仍在",
+          "街坊生活",
+          "老店还在经营",
+          "日常使用",
+          "生活气息",
+          "只剩游客"
+        ],
+        "en": [
+          "living community",
+          "continuing everyday use",
+          "local shops still operating",
+          "ordinary neighborhood life",
+          "lived-in character",
+          "tourist-only space"
+        ]
+      },
+      "gloss": {
+        "zh": "居民、商户、传承人等真实主体是否持续存在，以及地方生活方式、生产经营、社会交往、传统业态和社区记忆是否仍在当代发生。",
+        "en": "Whether residents, merchants, practitioners, and other real actors remain present and continue local ways of life, production, social interaction, traditional trades, and community memory."
+      },
+      "boundary": {
+        "zh": "一般的人多、热闹、消费旺不能证明生活文化延续，必须识别真实主体、日常使用和持续性。",
+        "en": "Crowds, liveliness, and consumption alone do not prove continuity; evidence must identify real actors, everyday use, and persistence."
+      }
+    },
+    {
+      "dimension_id": "cultural_practice_experience",
+      "name": "文化实践体验",
+      "name_en": "Cultural practice experience",
+      "cues": [
+        "传统技艺",
+        "非遗活动",
+        "非遗体验",
+        "节庆",
+        "民俗",
+        "传统仪式",
+        "文化演艺",
+        "文化教育",
+        "研学",
+        "文化市集",
+        "技艺传习",
+        "互动参与",
+        "居民参与",
+        "游客参与",
+        "青年参与",
+        "活动常态化",
+        "表演化",
+        "形式化",
+        "一次性展示"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "传统技艺",
+          "非遗体验",
+          "节庆民俗",
+          "传统仪式",
+          "文化教育",
+          "互动参与",
+          "活动常态化",
+          "表演化"
+        ],
+        "en": [
+          "traditional craft",
+          "intangible heritage experience",
+          "festival custom",
+          "ritual",
+          "cultural education",
+          "participatory activity",
+          "regular cultural practice",
+          "staged performance"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "亲自体验",
+          "文化参与",
+          "技艺学习",
+          "真正实践",
+          "给游客看的表演",
+          "形式主义体验"
+        ],
+        "en": [
+          "hands-on heritage experience",
+          "cultural participation",
+          "learning a craft",
+          "living practice",
+          "tourist-oriented staging",
+          "tokenistic experience"
+        ]
+      },
+      "gloss": {
+        "zh": "传统技艺、节庆民俗、非遗、仪式、演艺、文化教育、市集等实践是否真实发生，以及公众是否参与并形成理解和文化获得。",
+        "en": "Whether crafts, festivals, customs, intangible heritage, rituals, performances, education, and markets genuinely occur and enable meaningful participation and cultural learning."
+      },
+      "boundary": {
+        "zh": "关注具体文化实践是否真实发生及能否参与；一次性展示、纯表演和活动宣传不能自动视为活态传承。",
+        "en": "Focus on genuine practice and participation; one-off display, pure staging, or promotion does not by itself indicate living transmission."
+      }
+    },
+    {
+      "dimension_id": "place_atmosphere_experience",
+      "name": "场所氛围体验",
+      "name_en": "Place atmosphere experience",
+      "cues": [
+        "历史氛围",
+        "地方文化氛围",
+        "场所感",
+        "老城感觉",
+        "市井气息",
+        "烟火气",
+        "生活感",
+        "怀旧感",
+        "声音环境",
+        "气味环境",
+        "饮食环境",
+        "夜间氛围",
+        "节庆氛围",
+        "广告干扰",
+        "噪声",
+        "失去老街味道"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "历史氛围",
+          "地方感",
+          "场所感",
+          "市井气息",
+          "烟火气",
+          "生活感",
+          "夜间氛围",
+          "老街味道"
+        ],
+        "en": [
+          "historic atmosphere",
+          "sense of place",
+          "local ambience",
+          "street-life atmosphere",
+          "lived-in feeling",
+          "nostalgia",
+          "night-time atmosphere",
+          "old-street character"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "老城氛围",
+          "整体很有历史感",
+          "有生活味",
+          "文化气息",
+          "环境没有历史感觉"
+        ],
+        "en": [
+          "old-city ambience",
+          "immersive historic feeling",
+          "everyday-life atmosphere",
+          "cultural ambience",
+          "loss of historic atmosphere"
+        ]
+      },
+      "gloss": {
+        "zh": "公众在实际使用中由历史环境、地方文化、社会活动、感官刺激和空间情境共同形成的历史感、地方感、生活感和情绪体验。",
+        "en": "The historical, local, lived, sensory, and emotional atmosphere perceived through the combined physical, cultural, and social setting of the place."
+      },
+      "boundary": {
+        "zh": "仅有街宽、密度、围合或建筑数量等客观形态描述时不纳入，只有其转化为公众场所感受时才编码。",
+        "en": "Objective morphology alone is excluded; encode it only when it is explicitly linked to perceived atmosphere or sense of place."
+      }
+    },
+    {
+      "dimension_id": "conservation_and_adaptive_reuse_perception",
+      "name": "保护活化感知",
+      "name_en": "Conservation and adaptive reuse perception",
+      "cues": [
+        "保护效果",
+        "修缮效果",
+        "修旧如旧",
+        "历史痕迹",
+        "真实性",
+        "完整性",
+        "过度翻新",
+        "仿古化",
+        "适应性利用",
+        "功能导入",
+        "老建筑继续使用",
+        "新旧协调",
+        "商业开发破坏",
+        "外观保护",
+        "内部空心化",
+        "统一装修"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "保护效果",
+          "修旧如旧",
+          "历史痕迹",
+          "过度翻新",
+          "适应性利用",
+          "新旧协调",
+          "外观保护",
+          "内部空心化"
+        ],
+        "en": [
+          "conservation quality",
+          "compatible repair",
+          "historic traces",
+          "over-restoration",
+          "adaptive reuse",
+          "old-new coordination",
+          "facade-only preservation",
+          "hollowed-out interior"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "保留原来的味道",
+          "老建筑重新使用",
+          "修得太新",
+          "像新建仿古街",
+          "只留建筑外壳"
+        ],
+        "en": [
+          "retaining original character",
+          "continued use of old buildings",
+          "made to look too new",
+          "newly built faux-historic street",
+          "preserved shell only"
+        ]
+      },
+      "gloss": {
+        "zh": "公众对历史文化资源保护、修缮、适应性利用、功能导入以及传统与现代关系处理效果的评价。",
+        "en": "Public evaluation of conservation, repair, adaptive reuse, new functions, and the relationship between historical authenticity and contemporary use."
+      },
+      "boundary": {
+        "zh": "游客增加、商业繁荣或店铺增多不能直接作为正向证据，必须同时考察真实性、持续使用和真实主体承载。",
+        "en": "More visitors, commerce, or shops is not positive evidence unless authenticity, continued use, and real actors are also sustained."
+      }
+    },
+    {
+      "dimension_id": "carrying_capacity_and_governance_experience",
+      "name": "承载治理体验",
+      "name_en": "Carrying capacity and governance experience",
+      "cues": [
+        "客流拥挤",
+        "排队",
+        "通行困难",
+        "旅游过载",
+        "夜间噪声",
+        "环境压力",
+        "垃圾",
+        "卫生",
+        "居民生活受影响",
+        "商业过载",
+        "游客居民冲突",
+        "客流分流",
+        "秩序管理",
+        "安全感",
+        "商贩管理",
+        "环境维护",
+        "服务响应",
+        "高峰管理",
+        "治理反馈"
+      ],
+      "cues_by_language": {
+        "zh": [
+          "客流拥挤",
+          "旅游过载",
+          "环境压力",
+          "居民生活受影响",
+          "客流分流",
+          "秩序管理",
+          "安全感",
+          "治理反馈"
+        ],
+        "en": [
+          "crowding",
+          "overtourism",
+          "environmental pressure",
+          "impact on residents",
+          "crowd diversion",
+          "order management",
+          "sense of safety",
+          "governance response"
+        ]
+      },
+      "near_synonyms": {
+        "zh": [
+          "完全走不动",
+          "超过承受能力",
+          "影响居民生活",
+          "现场秩序良好",
+          "管理回应及时"
+        ],
+        "en": [
+          "unable to move through crowds",
+          "beyond carrying capacity",
+          "disruption to residents",
+          "well-managed on site",
+          "timely management response"
+        ]
+      },
+      "gloss": {
+        "zh": "公众对高强度使用产生的人流、环境、社会和空间压力，以及秩序、安全、客流、环境和利益协调治理效果的综合体验。",
+        "en": "Public experience of crowd, environmental, social, and spatial pressures under intensive use, together with the effectiveness of order, safety, flow, environmental, and stakeholder governance."
+      },
+      "boundary": {
+        "zh": "地铁数量、路网中心性和客观步行距离不作为核心证据，压力如何被体验及治理是否有效才纳入。",
+        "en": "Transit counts, network centrality, or objective distance are excluded unless linked to experienced pressure or governance effectiveness."
+      }
+    }
+  ],
+  "confidence_components": {
+    "semantic": {
+      "polarity_coverage": 0.35,
+      "aspect_clarity": 0.3,
+      "text_completeness": 0.2,
+      "rule_clarity": 0.15
+    },
+    "evidence_reliability": {
+      "direct_place_relevance": 0.25,
+      "explicit_experience": 0.2,
+      "place_relevance": 0.2,
+      "text_completeness": 0.2,
+      "time_completeness": 0.1,
+      "non_promotional_source": 0.05
+    }
+  },
+  "release_protocol": {
+    "evaluation_protocol_version": "AHPV-7D-EP-1.1",
+    "semantic_codebook_version": "AHPV-SCB-1.0",
+    "released_at": "2026-08-14",
+    "change_class": "scoring_rule_change",
+    "query_count": 4,
+    "source_count": 4,
+    "source_domain_count": 3,
+    "decision_count": 5,
+    "mode": "online_verified_no_change",
+    "sources": [
+      {
+        "source_id": "CAL-001",
+        "url": "https://aclanthology.org/S16-1002/",
+        "title": "SemEval-2016 Task 5: Aspect Based Sentiment Analysis",
+        "publisher": "Association for Computational Linguistics",
+        "retrieved_at": "2026-08-14",
+        "access_status": "full",
+        "method_area": "aspect-based sentiment analysis",
+        "finding": "方面级情感分析把评价对象或方面与意见极性建立明确关系，支持本规则库先归维度、后判极性的结构。"
+      },
+      {
+        "source_id": "CAL-002",
+        "url": "https://github.com/cjhutto/vaderSentiment",
+        "title": "VADER Sentiment Analysis",
+        "publisher": "VADER project",
+        "retrieved_at": "2026-08-14",
+        "access_status": "full",
+        "method_area": "lexicon and contextual rules",
+        "finding": "词典与可解释规则可结合否定、程度、强调和转折处理社交文本，但领域迁移仍需边界审计。"
+      },
+      {
+        "source_id": "CAL-003",
+        "url": "https://spacy.io/usage/rule-based-matching/",
+        "title": "Rule-based matching",
+        "publisher": "spaCy",
+        "retrieved_at": "2026-08-14",
+        "access_status": "full",
+        "method_area": "token and phrase matching",
+        "finding": "规则匹配应显式处理词元、规范化形式、短语边界和测试样例；未命中表达不应被强行赋值。"
+      },
+      {
+        "source_id": "CAL-004",
+        "url": "https://aclanthology.org/2026.semeval-1.452.pdf",
+        "title": "SemEval-2026 Task 3: Dimensional Aspect-Based Sentiment Analysis",
+        "publisher": "Association for Computational Linguistics",
+        "retrieved_at": "2026-08-14",
+        "access_status": "full",
+        "method_area": "continuous aspect-level valence",
+        "finding": "方面级连续效价能够表达分类极性以内的程度差异，但连续值仍需与具体方面、语种和领域边界绑定。"
+      }
+    ],
+    "decisions": [
+      {
+        "decision_id": "DEC-001",
+        "action": "retain",
+        "target": "方面归属与极性分离",
+        "rationale": "先识别七维方面，再计算该方面内部的极性和强度，避免整段总体情绪覆盖具体评价对象。",
+        "source_ids": [
+          "CAL-001",
+          "CAL-004"
+        ],
+        "affects_locked_codebook": false
+      },
+      {
+        "decision_id": "DEC-002",
+        "action": "retain",
+        "target": "双语词项加上下文规则",
+        "rationale": "保留中文、英文、近义释义、否定、程度、转折和反讽复核的透明路径，不用黑箱输出替代证据轨迹。",
+        "source_ids": [
+          "CAL-002",
+          "CAL-003"
+        ],
+        "affects_locked_codebook": false
+      },
+      {
+        "decision_id": "DEC-003",
+        "action": "modify",
+        "target": "规则更新生命周期",
+        "rationale": "把在线方法更新从单次地点任务前移到 Skill 发布校准；任务期只读锁定协议，以保证跨任务可比性并防止临时漂移。",
+        "source_ids": [
+          "CAL-001",
+          "CAL-002",
+          "CAL-003",
+          "CAL-004"
+        ],
+        "affects_locked_codebook": false
+      },
+      {
+        "decision_id": "DEC-004",
+        "action": "retain",
+        "target": "零命中编码解析与复核队列",
+        "rationale": "无法从双语词表取得完整结果时启动编码解析；候选只进入任务复核队列，不在任务中修改锁定词表或直接计分。",
+        "source_ids": [
+          "CAL-001",
+          "CAL-003"
+        ],
+        "affects_locked_codebook": false
+      },
+      {
+        "decision_id": "DEC-005",
+        "action": "modify",
+        "target": "正式评分证据数据链一致性",
+        "rationale": "修复实现中主题标签宽口径统计与主维度正式计分口径混用的问题；正式评分只按主维度归属，分离检索、候选和实际计分证据，并保留既有平台最低样本规则、七维尺度、权重和聚合方法。该缺陷修复不改变语义词表、极性规则、分值映射或任务期只读政策。",
+        "source_ids": [
+          "CAL-001",
+          "CAL-003"
+        ],
+        "affects_locked_codebook": false
+      }
+    ],
+    "release_review": {
+      "method_review_status": "approved",
+      "regression_status": "passed",
+      "benchmark_status": "passed",
+      "review_summary": "沿用既有发布前方法校准与任务期只读协议；本次仅修复正式评分证据资格、主维度归属、平台最低样本传导和独立复算验收的数据链一致性，不改变七维体系、权重、分值映射或平台聚合方法。自动化回归、异常模式基准和 Office 联合验收作为发布门禁执行并通过。"
+    },
+    "formal_scoring": {
+      "schema_version": "formal-scoring-chain-1",
+      "dimension_assignment_field": "primary_dimension",
+      "topic_coverage_field": "dimension_tags",
+      "dimension_tags_role": "theme_coverage_only_not_formal_scoring",
+      "multi_dimension_text_policy": "split_into_independent_evidence_units_with_unique_evidence_id_and_one_primary_dimension_each",
+      "deduplication_scope": "one_dedup_group_once_within_each_primary_dimension",
+      "deduplication_key_priority": [
+        "dedup_group",
+        "evidence_id"
+      ],
+      "eligible_unit_types": [
+        "page_body",
+        "user_post",
+        "user_review",
+        "comment",
+        "reply"
+      ],
+      "prohibited_semantic_methods": [
+        "coding_parse_fallback",
+        "not_applicable",
+        ""
+      ],
+      "count_fields": {
+        "retrieved": "retrieved_evidence_units",
+        "topic_coverage": "topic_coverage_evidence_units",
+        "eligible": "eligible_evidence_units",
+        "scored": "scored_evidence_units"
+      },
+      "platform_dimension": {
+        "minimum_dimension_units": 3,
+        "scored_status": "scored",
+        "insufficient_status": "insufficient_platform_samples"
+      },
+      "tendency_conversion": {
+        "formula": "(tendency + 5) * 10",
+        "minimum": 0,
+        "maximum": 100
+      },
+      "platform_aggregation": {
+        "platform_equal_method": "arithmetic_mean",
+        "sample_weighted_method": "effective_scored_samples_with_cap",
+        "sample_weight_cap": 0.5,
+        "minimum_platform_effective_samples": 5,
+        "all_small_platform_exception": true
+      },
+      "composite_formula": "S = 0.15H + 0.15L + 0.20C + 0.15P + 0.10A + 0.15R + 0.10G",
+      "dimension_confidence_basis": "scored_evidence_units_and_scored_source_breadth",
+      "dimension_confidence_thresholds": {
+        "中": {
+          "scored_evidence_units": 25,
+          "distinct_source_pages": 12,
+          "source_categories": 3,
+          "scorable_platforms": 1
+        },
+        "中高": {
+          "scored_evidence_units": 40,
+          "distinct_source_pages": 20,
+          "source_categories": 4,
+          "scorable_platforms": 1
+        },
+        "高": {
+          "scored_evidence_units": 60,
+          "distinct_source_pages": 30,
+          "source_categories": 5,
+          "scorable_platforms": 1
+        }
+      }
+    },
+    "manifest_sha256": "beb7db9b5cb4ca5a7119070ececd40d1b4bb26d31567483da68e9df855dbca26",
+    "task_rule_update_policy": "locked_at_skill_release",
+    "task_level_rule_mutation_allowed": false,
+    "locked_task_fields": [
+      "dimension_weights",
+      "score_scale",
+      "thresholds",
+      "scope",
+      "polarity_lexicons",
+      "dimension_lexicons",
+      "context_rules",
+      "confidence_components",
+      "coding_parse_rules",
+      "formal_scoring"
+    ],
+    "candidate_policy": "unmatched expressions enter a review queue and cannot mutate the released codebook during a task"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "schema_version": "host-receipt-trust-1",
+  "issuers": [],
+  "policy": "Publisher-managed trust roots only. Never enroll keys during a research task."
+}

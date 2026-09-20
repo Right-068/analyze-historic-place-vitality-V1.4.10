@@ -1,0 +1,911 @@
+{
+  "title": "",
+  "subtitle": "基于公开网络资料与可识别用户体验文本的标准化评价",
+  "retrieval_date": "",
+  "dimension_weight_scheme": "初始研究权重",
+  "dimension_weights": {
+    "历史文化感知": 0.15,
+    "在地文化特征": 0.15,
+    "生活文化延续": 0.2,
+    "文化实践体验": 0.15,
+    "场所氛围体验": 0.1,
+    "保护活化感知": 0.15,
+    "承载治理体验": 0.1
+  },
+  "research_scope": [
+    {
+      "text": "",
+      "links": []
+    },
+    {
+      "text": "",
+      "links": []
+    },
+    {
+      "text": "",
+      "links": []
+    },
+    {
+      "text": "",
+      "links": []
+    }
+  ],
+  "research_run": {
+    "task_run_id": "",
+    "minimum_effective_samples": 280,
+    "legacy_minimum_effective_sample_floor": 100,
+    "target_confidence": "中高",
+    "actual_effective_samples": 0,
+    "eligible_evidence_units": 0,
+    "scored_evidence_units": 0,
+    "formal_scoring_schema_version": "formal-scoring-chain-1",
+    "deep_iteration_rounds": 0,
+    "sample_target_status": "",
+    "semantic_quantification": {
+      "native_numeric_records": 0,
+      "rule_codebook_records": 0,
+      "coding_parse_records": 0,
+      "lexicon_zero_hit_records": 0,
+      "coding_candidate_records": 0,
+      "coding_unresolved_records": 0,
+      "assisted_or_manual_records": 0,
+      "auto_eligible_records": 0,
+      "human_confirmed_records": 0,
+      "review_required_records": 0,
+      "low_confidence_records": 0,
+      "figurative_risk_records": 0,
+      "evaluation_protocol_version": "",
+      "semantic_codebook_version": "",
+      "semantic_codebook_sha256": "",
+      "protocol_released_at": "",
+      "release_calibration_mode": "",
+      "release_calibration_source_count": 0,
+      "release_calibration_decision_count": 0,
+      "task_rule_refresh_performed": false,
+      "task_rule_mutation_performed": false,
+      "semantic_rules_workbook": "",
+      "agreement_summary": ""
+    }
+  },
+  "sections": [
+    {
+      "number": 1,
+      "title": "地点基本信息",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "项目",
+            "基本信息"
+          ],
+          "rows": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "扩展检索名称和关联词"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "检索过程与数据来源",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "2.1 实际使用的检索词"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "2.2 来源规模"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "指标",
+            "本次检索结果"
+          ],
+          "rows": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "2.3 去重规则执行情况"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "2.4 无法充分访问的平台"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "平台",
+            "访问情况",
+            "处理方式"
+          ],
+          "rows": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "来源结构分析",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "来源平台",
+            "来源数量",
+            "内容类型",
+            "时间范围",
+            "是否用于情感分析",
+            "主要价值",
+            "主要局限"
+          ],
+          "rows": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "总体情感与综合评价",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "指标",
+            "得分",
+            "说明"
+          ],
+          "rows": []
+        },
+        {
+          "type": "subheading",
+          "text": "跨平台计算"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "七个维度的详细分析",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "七维评价汇总表",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "评价维度",
+            "初始研究权重",
+            "正面主题",
+            "负面主题",
+            "提及率等级",
+            "倾向得分",
+            "转换分",
+            "证据充分度",
+            "主要来源平台"
+          ],
+          "rows": []
+        },
+        {
+          "type": "subheading",
+          "text": "权重核算"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 7,
+      "title": "高频正面评价主题",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "排名",
+            "正面主题",
+            "具体含义",
+            "提及率等级",
+            "正面强度1—5",
+            "主要平台",
+            "证据一致性"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "高频负面评价主题",
+      "blocks": [
+        {
+          "type": "table",
+          "headers": [
+            "排名",
+            "负面主题",
+            "具体问题",
+            "提及率等级",
+            "负面强度1—5",
+            "主要平台",
+            "证据一致性"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "不同平台评价差异",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "9.1 平台特征"
+        },
+        {
+          "type": "subheading3",
+          "text": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading3",
+          "text": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading3",
+          "text": ""
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "9.2 平台评分表"
+        },
+        {
+          "type": "table",
+          "headers": [
+            "平台",
+            "主要正面主题",
+            "主要负面主题",
+            "七维综合分",
+            "样本充分度",
+            "平台偏向"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "不同用户群体和场景差异",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "用户群体或场景",
+            "主要感知",
+            "主要问题",
+            "判断可靠性"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "时间变化分析",
+      "blocks": [
+        {
+          "type": "subheading",
+          "text": "11.1 改造前后的空间变化"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "11.2 近年用户感知的变化"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "11.3 商业化程度变化"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "11.4 游客数量和拥挤变化"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "11.5 文化活动变化"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "subheading",
+          "text": "11.6 长期问题判断"
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "table",
+          "headers": [
+            "问题",
+            "是否长期存在",
+            "判断"
+          ],
+          "rows": []
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "历史文化活态传承感知评价",
+      "blocks": [
+        {
+          "type": "judgments",
+          "items": [
+            {
+              "label": "综合分",
+              "value": ""
+            },
+            {
+              "label": "核心优势",
+              "value": ""
+            },
+            {
+              "label": "核心风险",
+              "value": ""
+            },
+            {
+              "label": "底线性问题",
+              "value": ""
+            },
+            {
+              "label": "证据充分度",
+              "value": ""
+            },
+            {
+              "label": "评价置信度",
+              "value": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "结论",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        },
+        {
+          "type": "paragraph",
+          "text": "",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "来源清单",
+      "blocks": [
+        {
+          "type": "paragraph",
+          "text": "来源链接均指向本次实际核验的页面；无法确认日期或正文读取状态的记录在工作簿中如实标注。",
+          "links": []
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "机器可读结果",
+      "blocks": []
+    }
+  ],
+  "dimension_analyses": [
+    {
+      "number": 1,
+      "name": "历史文化感知",
+      "initial_research_weight": 0.15,
+      "definition": "历史文化感知是指公众对于街区历史价值、文化底蕴、历史事件、人物故事、遗产资源、城市记忆和文化叙事的识别、理解、记忆及情感反应。",
+      "boundary": "关注是否知晓并理解文化意义；客观资源存在但未被公众感知，不能直接作为正向感知证据。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    },
+    {
+      "number": 2,
+      "name": "在地文化特征",
+      "initial_research_weight": 0.15,
+      "definition": "在地文化特征是指街区文化表达与本地历史背景、地域文化、生活方式和社会环境之间形成的独特联系，以及公众对于这种地方辨识度、文化真实性和不可替代性的感知。",
+      "boundary": "关注文化是否属于当地并具有独特性；是否仍由真实主体持续实践归入生活文化延续。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    },
+    {
+      "number": 3,
+      "name": "生活文化延续",
+      "initial_research_weight": 0.2,
+      "definition": "生活文化延续是指居民、商户、传承人等真实主体是否仍持续存在于街区之中，以及与地方文化相关的生活方式、生产经营、社会交往、传统业态和社区记忆是否仍在当代持续发生。",
+      "boundary": "一般的人多、热闹、消费旺不构成生活文化延续证据；必须识别真实主体、日常使用和持续性。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    },
+    {
+      "number": 4,
+      "name": "文化实践体验",
+      "initial_research_weight": 0.15,
+      "definition": "文化实践体验是指传统技艺、节庆民俗、非遗活动、文化演艺、传统仪式、文化教育、研学、市集及其他文化实践是否真实发生，以及公众是否真正参与并形成互动、理解和文化获得。",
+      "boundary": "关注具体实践是否发生及能否参与；一次性展示、纯表演和仅有活动宣传不能自动视为活态传承。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    },
+    {
+      "number": 5,
+      "name": "场所氛围体验",
+      "initial_research_weight": 0.1,
+      "definition": "场所氛围体验是指公众在实际使用街区过程中，由历史环境、地方文化、社会活动、感官刺激和空间情境共同形成的整体场所感受。",
+      "boundary": "仅描述街宽、密度、围合或建筑数量等客观形态时不纳入；只有其转化为公众场所感受时才编码。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    },
+    {
+      "number": 6,
+      "name": "保护活化感知",
+      "initial_research_weight": 0.15,
+      "definition": "保护活化感知是指公众对历史文化资源保护、修缮、适应性利用、功能导入及传统与现代关系处理效果所形成的评价。",
+      "boundary": "游客增加、商业繁荣或店铺增多不能直接作为正向证据；必须同时考察真实性、持续使用和真实主体承载。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    },
+    {
+      "number": 7,
+      "name": "承载治理体验",
+      "initial_research_weight": 0.1,
+      "definition": "承载治理体验是指公众对高强度使用状态下产生的人流、环境、社会和空间压力，以及相应秩序维护、安全管理、客流组织、环境治理和利益协调效果的综合体验。",
+      "boundary": "地铁数量、路网中心性和客观步行距离不作为核心证据；压力如何被体验及治理是否有效才纳入。",
+      "positive": [],
+      "negative": [],
+      "differences_title": "主体与时间情境差异",
+      "differences": [],
+      "fact_perception": [],
+      "mechanism_analysis": [],
+      "counterevidence": [],
+      "uncertainty_boundary": [],
+      "synthesis_judgment": [],
+      "additional_analysis": [],
+      "themes": [],
+      "mention_level": "",
+      "mention_range": "",
+      "mention_basis": "",
+      "tendency_score": null,
+      "conversion_score": null,
+      "evidence_strength": "",
+      "retrieved_evidence_units": 0,
+      "topic_coverage_evidence_units": 0,
+      "eligible_evidence_units": 0,
+      "scored_evidence_units": 0,
+      "evidence_units": 0,
+      "scoring_positive_units": 0,
+      "scoring_neutral_units": 0,
+      "scoring_negative_units": 0,
+      "valid_scoring_platforms": 0,
+      "dimension_candidate_platform_count": 0,
+      "dimension_scorable_platform_count": 0,
+      "run_included_platform_count": 0,
+      "platform_minimum_rule_status": "insufficient_platform_samples",
+      "distinct_source_pages": 0,
+      "source_category_count": 0,
+      "dimension_confidence": "",
+      "minimum_confidence": "中",
+      "preferred_confidence": "中高/高",
+      "evidence_status": "",
+      "targeted_deep_rounds": [],
+      "targeted_round_count": 0,
+      "medium_enhancement_rounds": [],
+      "medium_completion_audit_passed": false,
+      "medium_completion_basis": "",
+      "independent_exhaustion_audit_passed": false,
+      "exhaustion_basis": "",
+      "representative_sources": []
+    }
+  ],
+  "machine_readable_line": "",
+  "result_layer": {
+    "name": "历史文化活态传承感知评价",
+    "composite_score": null,
+    "core_strengths": [],
+    "core_risks": [],
+    "bottom_line_issues": [],
+    "evidence_sufficiency": "",
+    "evaluation_confidence": "",
+    "bottom_line_override_checked": false
+  }
+}

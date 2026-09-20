@@ -1,0 +1,5 @@
+idna==3.10
+XlsxWriter==3.2.9
+python-docx==1.2.0
+cryptography==50.0.1
+tzdata==2026.3

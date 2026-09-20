@@ -1,0 +1,15 @@
+{
+  "schema_version": "batch-execution-1",
+  "query_window_size": 6,
+  "candidate_urls_per_query": 3,
+  "initial_pages_per_query": 2,
+  "page_capture_batch_size": 12,
+  "triage_batch_size": 12,
+  "semantic_batch_size": 10,
+  "max_agent_visible_chars": 12000,
+  "page_view_chars": 900,
+  "triage_protocol_version": "local-view-1",
+  "debug": false,
+  "cost_regression_warning_ratio": 0.15,
+  "purpose": "Execution load only; budgets split batches and never terminate research or override admission."
+}

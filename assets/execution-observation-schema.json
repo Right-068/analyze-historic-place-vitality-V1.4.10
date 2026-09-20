@@ -1,0 +1,217 @@
+{
+  "schema_version": "execution-record-contract-2",
+  "plan_owned_fields": [
+    "task_run_id",
+    "plan_id",
+    "query_id",
+    "place",
+    "place_identity_sha256",
+    "query",
+    "normalized_query_intent",
+    "query_dimension_targets",
+    "source_category_target",
+    "iteration_mode",
+    "planned_iteration_round",
+    "target_time_range",
+    "language",
+    "target_platform_id",
+    "polarity",
+    "target_subject",
+    "retrieval_entry",
+    "gap_target",
+    "target_confidence",
+    "dimension_confidence_before_round",
+    "audit_snapshot_sha256",
+    "plan_binding_sha256"
+  ],
+  "observer_fields": {
+    "execution_id": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "started_at": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "finished_at": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "retrieved_at": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "search_tool": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "status": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "next_action": {
+      "required": true,
+      "type": "string",
+      "origin": "observation"
+    },
+    "returned_results": {
+      "required": true,
+      "type": "nonnegative_integer_or_decimal_string",
+      "origin": "observation"
+    },
+    "opened_pages": {
+      "required": true,
+      "type": "nonnegative_integer_or_decimal_string",
+      "origin": "observation"
+    },
+    "relevant_pages": {
+      "required": true,
+      "type": "nonnegative_integer_or_decimal_string",
+      "origin": "observation"
+    },
+    "duplicate_pages": {
+      "required": true,
+      "type": "nonnegative_integer_or_decimal_string",
+      "origin": "observation"
+    },
+    "login_triggered": {
+      "required": true,
+      "type": "boolean",
+      "origin": "observation"
+    },
+    "restriction_triggered": {
+      "required": true,
+      "type": "boolean",
+      "origin": "observation"
+    },
+    "retry_number": {
+      "required": true,
+      "type": "nonnegative_integer_or_decimal_string",
+      "origin": "observation"
+    },
+    "retry_reason": {
+      "required": false,
+      "type": "string",
+      "origin": "observation"
+    },
+    "original_execution_id": {
+      "required": false,
+      "type": "string",
+      "origin": "observation"
+    },
+    "retry_interval_policy": {
+      "required": false,
+      "type": "string",
+      "origin": "observation"
+    },
+    "error_type": {
+      "required": false,
+      "type": "string",
+      "origin": "observation"
+    },
+    "notes": {
+      "required": false,
+      "type": "string",
+      "origin": "observation"
+    }
+  },
+  "generated_fields": [
+    "search_id",
+    "record_type",
+    "iteration_round",
+    "event_sequence",
+    "state_updated_at",
+    "query_definition_sha256",
+    "plan_row_sha256",
+    "execution_binding_sha256",
+    "route_id",
+    "new_scored_evidence_units",
+    "cumulative_scored_evidence_units"
+  ],
+  "search_tool_enum": [
+    "web_search",
+    "browser",
+    "web_fetch",
+    "connector",
+    "academic_search",
+    "search_api"
+  ],
+  "status_enum": [
+    "blocked",
+    "completed",
+    "failed",
+    "no_results",
+    "partial"
+  ],
+  "next_action_enum": [
+    "continue",
+    "exhausted",
+    "not_applicable",
+    "retry",
+    "target_met"
+  ],
+  "plan_field_origin": "verified_registered_query_plan",
+  "generated_field_origins": {
+    "search_id": "execution_id",
+    "record_type": "writer_constant",
+    "iteration_round": "verified_plan_and_execution",
+    "event_sequence": "writer_ingestion_sequence",
+    "state_updated_at": "finished_at",
+    "query_definition_sha256": "verified_plan_and_execution",
+    "plan_row_sha256": "verified_plan_and_execution",
+    "execution_binding_sha256": "verified_plan_and_execution",
+    "route_id": "verified_registered_query_plan",
+    "new_scored_evidence_units": "formal_scoring_chain",
+    "cumulative_scored_evidence_units": "formal_scoring_chain"
+  },
+  "identity_selectors": [
+    "plan_id",
+    "query_id"
+  ],
+  "additional_properties": false,
+  "conditional_observation_fields": {
+    "target_audit_file": {
+      "type": "string",
+      "required_when": {
+        "next_action": "target_met"
+      },
+      "otherwise": "absent_or_empty",
+      "validation": "same_task_protected_evidence_audit"
+    },
+    "target_audit_sha256": {
+      "type": "string",
+      "required_when": {
+        "next_action": "target_met"
+      },
+      "otherwise": "absent_or_empty",
+      "validation": "same_task_protected_evidence_audit"
+    },
+    "target_audit_state_file": {
+      "type": "string",
+      "required_when": {
+        "next_action": "target_met"
+      },
+      "otherwise": "absent_or_empty",
+      "validation": "same_task_protected_evidence_audit"
+    },
+    "target_audit_writer_ledger": {
+      "type": "string",
+      "required_when": {
+        "next_action": "target_met"
+      },
+      "otherwise": "absent_or_empty",
+      "validation": "same_task_protected_evidence_audit"
+    }
+  },
+  "timestamp_format": "YYYY-MM-DDTHH:mm:ss[.ffffff]Z or explicit +/-HH:mm",
+  "boolean_storage": [
+    "true",
+    "false"
+  ]
+}
