@@ -1,0 +1,66 @@
+# 详细运行日志
+本文件由程序在任务执行时实时追加；不得事后补造时间戳。
+
+## LOG-000001
+真实时间：2026-09-20T09:13:06+08:00
+阶段：INITIALIZE
+动作：初始化详细运行日志
+状态：running
+机器记录：{"action":"初始化详细运行日志","analysis_object":"北京路历史文化街区","event_id":"LOG-000001","phase":"INITIALIZE","state_binding_sha256":"b6cd2d4db59bd6c81477b1f15c0952fe4e3bace853704e31458e51801c70072b","state_revision":1,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T09:13:06+08:00","transaction_id":"48c89e7c4b16466090f87889c5c3b49e"}
+
+## LOG-000002
+真实时间：2026-09-20T09:13:07+08:00
+阶段：SEARCH
+动作：编排器完成前置阶段并提交检查点
+状态：running
+机器记录：{"action":"编排器完成前置阶段并提交检查点","event_id":"LOG-000002","next_action":"","phase":"SEARCH","state_binding_sha256":"437eb7b52e7d5bb18293ea6badfc79e5281ec8c3dabff1f9fa67bbf2ac514fa6","state_revision":2,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T09:13:07+08:00","transaction_id":"0cdc94e1baa24e6fb67ea949dc23fcd9"}
+
+## LOG-000003
+真实时间：2026-09-20T09:23:14+08:00
+阶段：SEARCH
+动作：模块完成：DISCOVERY；下一模块：PAGE_CAPTURE
+状态：running
+机器记录：{"action":"模块完成：DISCOVERY；下一模块：PAGE_CAPTURE","event_id":"LOG-000003","next_action":"","phase":"SEARCH","state_binding_sha256":"0f1f80f16e9d8fa6dc376174a7f07655d09a2ee5e5dc4a9bb6af9fc85ff33700","state_revision":3,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T09:23:14+08:00","transaction_id":"3f8f44eaa48242bba8d603792f94f4a4"}
+
+## LOG-000004
+真实时间：2026-09-20T10:42:53+08:00
+阶段：SEARCH
+动作：模块完成：PAGE_CAPTURE；下一模块：NORMALIZE
+状态：running
+机器记录：{"action":"模块完成：PAGE_CAPTURE；下一模块：NORMALIZE","event_id":"LOG-000004","next_action":"","phase":"SEARCH","state_binding_sha256":"b292911415b1c0ad0dbf2141075d4acfbe5fd910c60532258ea8a21b82c46a86","state_revision":4,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T10:42:53+08:00","transaction_id":"79b88963e1584206b941a62eeb2ab0a1"}
+
+## LOG-000005
+真实时间：2026-09-20T10:55:38+08:00
+阶段：SEARCH
+动作：模块完成：NORMALIZE；下一模块：TRIAGE
+状态：running
+机器记录：{"action":"模块完成：NORMALIZE；下一模块：TRIAGE","event_id":"LOG-000005","next_action":"","phase":"SEARCH","state_binding_sha256":"7aaf3d4fc6f489cdf8387fcfb5411aaa19fdd52354698b702a4451effa119445","state_revision":5,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T10:55:38+08:00","transaction_id":"2e271bee202b4ec684709d3977a84d30"}
+
+## LOG-000006
+真实时间：2026-09-20T11:23:10+08:00
+阶段：SEARCH
+动作：页面覆盖尚不足，继续读取已发现的公开候选；未启动正式评分
+状态：running
+机器记录：{"action":"页面覆盖尚不足，继续读取已发现的公开候选；未启动正式评分","event_id":"LOG-000006","next_action":"","phase":"SEARCH","state_binding_sha256":"122818a6ee2709c51833a3a70db27cf5bb27be7a5a6fffe657313738812dbeb0","state_revision":6,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T11:23:10+08:00","transaction_id":"720383bfaa634e098fa37984ec3fb9c2"}
+
+## LOG-000007
+真实时间：2026-09-20T12:40:54+08:00
+阶段：SEARCH
+动作：模块完成：PAGE_CAPTURE；下一模块：NORMALIZE
+状态：running
+机器记录：{"action":"模块完成：PAGE_CAPTURE；下一模块：NORMALIZE","event_id":"LOG-000007","next_action":"","phase":"SEARCH","state_binding_sha256":"c458c7519f4f3e1e033fd6d60a37d7d95d8aed1c8f9d7fe4682ede0d7b257e79","state_revision":7,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T12:40:54+08:00","transaction_id":"f66dbca7591e4b9b8d0122a257239cf5"}
+
+## LOG-000008
+真实时间：2026-09-20T12:49:18+08:00
+阶段：SEARCH
+动作：模块完成：NORMALIZE；下一模块：TRIAGE
+状态：running
+机器记录：{"action":"模块完成：NORMALIZE；下一模块：TRIAGE","event_id":"LOG-000008","next_action":"","phase":"SEARCH","state_binding_sha256":"79828349c89f0a9d278186f1f2c0b15b1486b8e5b11af4e83b31166f014eef3e","state_revision":8,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T12:49:18+08:00","transaction_id":"3ba22a3972024ff1a60b3b0a512fec31"}
+
+## LOG-000009
+真实时间：2026-09-20T12:59:11+08:00
+阶段：SEARCH
+动作：页面覆盖尚不足，继续读取已发现的公开候选；未启动正式评分
+状态：running
+机器记录：{"action":"页面覆盖尚不足，继续读取已发现的公开候选；未启动正式评分","event_id":"LOG-000009","next_action":"","phase":"SEARCH","state_binding_sha256":"afcfa65bec440e1f917b5b74bac1dbd1e64b049f1805983ae478c713e68a3fb6","state_revision":9,"status":"running","task_run_id":"RUN-a31a13821d1641a1996c8c85ca1a2eb7","timestamp":"2026-09-20T12:59:11+08:00","transaction_id":"2bd856aff00b4133b4844867567cac8d"}
+

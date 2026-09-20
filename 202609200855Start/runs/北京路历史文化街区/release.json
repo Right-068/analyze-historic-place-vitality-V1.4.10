@@ -1,0 +1,674 @@
+{
+  "manifest_type": "immutable_skill_release",
+  "task_run_id": "RUN-a31a13821d1641a1996c8c85ca1a2eb7",
+  "skill_root_name": "analyze-historic-place-vitality",
+  "file_count": 114,
+  "files": {
+    "SKILL.md": "020714fedd10fe72031425f0d63b0aea897038f36b26fe5d94c2452b7d31cfc8",
+    "agents/openai.yaml": "c9a504f0074f0d3fea7dc09923cef7bdedeb035f0b82d4745596abd62dc25893",
+    "assets/batch-execution.json": "0dea8f861d8c4dca1961c47c0d8e1c62ed317c3a26b53770aa287f4e145db3b5",
+    "assets/candidate-evidence-template.jsonl": "9a8bdf11ece87e877954c30e6e93146d9eaf96d5a8f1cd710bd71333049ce211",
+    "assets/candidate-source-template.jsonl": "8b0609ff422f689a933c594721ec7773f373047ecdab39e74241a969b8031e04",
+    "assets/canonical-evidence-ledger-template.csv": "a7067bd5a82009a2e3a5716bb8e865f76f47c7e43bb972ccfaf6b0984c79714b",
+    "assets/canonical-source-ledger-template.csv": "b275eef16ff53ffa2af6d0231217ba25a022da1147ef39f1167bba615635ba58",
+    "assets/evaluation-protocol-calibration.json": "beb7db9b5cb4ca5a7119070ececd40d1b4bb26d31567483da68e9df855dbca26",
+    "assets/evaluation-protocol.json": "00eab9c67ac078222f8ff69ed233f5a9ecacee688fc3feb0e01f247fa58ede5b",
+    "assets/evidence-ledger-template.csv": "d47e04388646d8c57f74a7ea7b1bde81112e7f03a15420c632c8cde478baeac1",
+    "assets/execution-observation-schema.json": "71484d6ae886d255ac9398714325494690168e6fa00858a448e6dc094b541a58",
+    "assets/execution-observation-template.jsonl": "a8a76159af220e2506b11a7d2686d235d13e2c924b263d27f7993ef0a50261dd",
+    "assets/host-receipt-trust.json": "0626b3aa78798ffbb7f9744af82af5f8abc483c5fc2976239364992fe47af3c8",
+    "assets/limitations-template.csv": "4712dbe0b1689ef05ae0b14ab9be7afc2f8ad92edd2ba7b2481eb949b5e31e95",
+    "assets/platform-aliases.json": "4ca2cbc3d5e7d370855b96aff0e895cca6aef2eee13f5b8025e27ba60aec8ca1",
+    "assets/platform-scores-template.json": "0ddcb0f5cfa8005f24d8afd0466836baac52ca7b75e9ed8f520dcdbc54b0eb7b",
+    "assets/report-data-template.json": "447c84863a9dba17a95b41f19e7e9c12012a1aca16c2e26146e5344de7deae9d",
+    "assets/report-narrative-template.json": "1b2e9972d1fbf469d0d76b7384798ff53151cfc482aa1cfff33244a0f0e56f10",
+    "assets/report-truth-template.json": "5e1ddc5261192b6ae76767d019677f5163de744c5b5649b6d25d6bb3744591b9",
+    "assets/retrieval-control.json": "1221114213b65432e8aa2e3d04dde1667fe5a95dcdf1fe986f285d088a1bd91d",
+    "assets/review-trust.json": "a0e09e48bdbf2afc5b9507478035fe150dda7768190cc32913bed4e6255ea51b",
+    "assets/run-directory-layout.json": "f1ef1a43042ac2cb59e082857126733bceecca4d51a25a7ffe43a1a98c1d7c2c",
+    "assets/runtime-dispatch.json": "a3e77b467e8053cd45051fec7f4daec10e7facb93a7f7a85f140c1184853b57e",
+    "assets/search-log-template.csv": "fccc54b535fc7adc98990478c01e9d2b543f75fedc96dab670f40e44d339fd22",
+    "assets/semantic-quantification-codebook.json": "edab8c13245d571d14e97d27c00a8b091654f4312374a2dad33f2a60bf8e0101",
+    "assets/source-capture-record-template.json": "8d6fceadea2420810abdec0c32fc0ab2d3155c825048a34880d9adb26e552348",
+    "assets/source-ledger-template.csv": "e3ac25a168f7f5d9e3e8d123628cf5f16e5adb0b50d4bdd522c478d45a8d9ade",
+    "assets/人工复核决定模板.csv": "aa9788eb391789a7dcc2de0955e237093f7b79813390b40e71cac92e6fcaa476",
+    "assets/人工复核变更台账模板.csv": "40dba07f72c9257117fd9aab1653717351d8fdbb302baac146f6938a9fd31fd7",
+    "assets/网络检索与量化编码_模板.xlsx": "cf7c6e8afff47a63acc341bbe01a331387979021134b2a90f775d57b4f70083a",
+    "assets/非量化文本量化评价规则_模板.xlsx": "a80e396c086eb8c08e65d16f8947da2a3de6b1a321e6bb3c79904d1e29201127",
+    "references/batch-pipeline.md": "4bd7337ab2243544b0a35426d939db82fa0fd21d3b7a5f89da2bb85244981169",
+    "references/evidence-data-lifecycle.md": "5d41b343a49766efd6f8475ad5dadbf425b27dcc78f7affa191b9abb926e2a5c",
+    "references/execution-contract.md": "2116dfd6bdc3dd0db376a8b0c8f8a9ba6638c393248e3d45a61ee69d9260a0f6",
+    "references/execution-facts.md": "6d356248371ab74020e1341e299179a3feb0b197f51d07b250e60c26ed670baf",
+    "references/host-input-adapters.md": "cc621f695a39970b1906182c8ab538002a880b0472280f3c2661f935ff4669ee",
+    "references/host-page-receipts.md": "5d50836f9d8d39368ea5e9b48093b23e2f5282125417127c06b9d989c06f52d8",
+    "references/office-deliverables.md": "e35662e47627b8e952a367cd039d094704b75852871ab025100e5d938a078a3f",
+    "references/operating-procedure.md": "6039a888214757fa7f3780ab2959fbf45a3dfa399bbc54dbe5fba66ea3a6a0c1",
+    "references/orchestrator-lite.md": "74e400a56bdb7856bf0ff177731b16dbf4f620c8f76d20b855265b5972c821ff",
+    "references/orchestrator.md": "8685540c6afe64a2e813659a25ce30563f3c105a7227a196d29fe3b4f33c4361",
+    "references/quality-gates.md": "129a6e1a37a55ecdfc25e391b69c6867cd819a90f28b4a567fb93bd01b6e5d93",
+    "references/report-schema.md": "a15a2e5788363254eb11be1d6287a3466bb4bdcd2638c831f10089ea0fab223d",
+    "references/research-protocol.md": "aad106287fb3d5fe178b9b15f16dc90543048016404cca225ab76448fa955bc2",
+    "references/runtime-adapters.md": "1a56148a245198bfca518bfd7b2c78796b3eea198c5cfc80fc5913de74835150",
+    "references/scoring-rubric.md": "58dfb3d248d6fb6af5d847aa874a00da73259708a219cb059750bb85f34d94ec",
+    "references/semantic-quantification-methods.md": "763712d47fc27d92d2f906738f6af19d1420086d7e4d4606a81970ece2f7bbaf",
+    "references/seven-plus-one-framework.md": "d18bd16b05c31bf305931e55f625c0a37034c5d93362f08d2b4afd603f2887a0",
+    "references/seven-plus-one-report-style.md": "199c1d11afc2947c8ca6c185e4da27673e503a85770a92a2c1439ecc1757dc96",
+    "references/storage-contract.md": "26909337f12b9bbb1b45cf27fd18ef349031c0bc29bf5ad7db22c7c3c21466f1",
+    "references/url-contract.md": "71c1f3f8503be47ad58fef0560aae26d63ca5ade80eac5139c2a4c81fe9df363",
+    "requirements.txt": "958dd29cd7fd9ea26276596806feabe1277b6b0119777cfd215bd154cd16cb61",
+    "scripts/action_dispatch.py": "36ff972003bedbb4e1f2e3f37861877d3a5603ff918b98c256727304d963de3d",
+    "scripts/apply_review_changes.py": "64bbac22683eb6e6000f263b697dcb02f7176013a8f13ee61301c3c50644b727",
+    "scripts/artifact_provenance.py": "42bc86393b31f221022557b86a9e723c0fb699ebe66534116967e3253df69899",
+    "scripts/assemble_report_data.py": "4eee4e9e005604ec1816fd196fb48b52304b2f4893a5869800229278e7231f03",
+    "scripts/audit_evidence.py": "109f871e7d527d5c22ddef8fdc083bc1faeb2d3589514c4f3c52d7af52291d1a",
+    "scripts/batch_pipeline.py": "1cc0374b9520531443717026b9f34191b8c92fbf9a100cf8207961a9335f6b48",
+    "scripts/build_docx_report.py": "37b86a1833f6d000623abe9725f0c3e1fbfcc6b3a20eb8e5ea6078585c46878e",
+    "scripts/build_query_plan.py": "9ba1fc18a231c744db5001311492b62f61644ae0e1d94fcd2ae91d3347d8b1af",
+    "scripts/build_research_workbook.py": "2b14c50ebf4552eec5fe2f63476a6c5698a5c5f730f7a7a1da1be936a2e964cd",
+    "scripts/build_semantic_rules_workbook.py": "2fbe4e5452664afb78777fcded49e2c8fdf7d0b396dd82d95893c3446fb623bc",
+    "scripts/calculate_scores.py": "c57bf7445280345bea2e555f0afbe9a7f1efa5578b8e04ca589fb9d40ec2789e",
+    "scripts/calibrate_evaluation_protocol.py": "141ec3bc40ed8ee4cafa5de19c39ad20864d05eb72e94458a27dd8f495ca9ae7",
+    "scripts/canonical_correction.py": "685c795fc6989486d2fa51341f7d48d5b89d18454e3addf6da94e8219667c2f9",
+    "scripts/check_runtime_environment.py": "beb8a33643be469f1e219e00e3555ed69605e07850ed930ecf6107751fc7b11e",
+    "scripts/collision_review.py": "7edf226734d8df11bb3c895dce78ba49fb6b5eff4cd54df9b390be7358ce01f0",
+    "scripts/compile_report_truth.py": "7a60cfcacd23ce5ac967b546b56ed720811f43f8def50c696562dbd643c1f0c9",
+    "scripts/content_blocks.py": "c9e1c66f570426cb3d55ee90acd5d6b4e8229c7296ce99d64ff8713ee14d6ec0",
+    "scripts/cost_metrics.py": "fcf99418491050160ca46ec6ab9b8fa26dab91138ed169837773ae21a1438d47",
+    "scripts/detailed_run_log.py": "91291b86b92fdc2972a6748e93be8e9d6caba5ac0100f1bf007702fe0b10bedb",
+    "scripts/dimension_evidence.py": "232a6de40eadec013cbf787a331e03c80cf1eed98f4b51b8b94248b8c727924d",
+    "scripts/dimension_framework.py": "cef8a1e908222c8ec78eb1592b5898825017d3fd630fb9c1aa1c07aa3d76965c",
+    "scripts/excel_localization.py": "3effe0c5e57d35090d562f205a317f3b681c8cf51705ca812c8ea66ebabfd85c",
+    "scripts/execution_amendments.py": "78b2e2bb25e572b60c22381a2a574f78fff4b91cd4bf1dedbe1e2797358067f2",
+    "scripts/execution_coordinator.py": "903c12bedb85134b3a333e575753384a7bcd1c561f8bdc7c88a131d035da0dee",
+    "scripts/execution_facts.py": "c6f976755b2997e2e430f9ec35f3facc4541da4a1510bc310920a6f1c5136b2a",
+    "scripts/execution_schema.py": "815dd273fef67de42d9ff55c759588b521bb50e5ac158088b99b835941f781b2",
+    "scripts/execution_semantics.py": "0f2479383d1c38938b4c248a13906d6bc0858bf49edf13e571ff36a5837ee5ab",
+    "scripts/formal_gates.py": "efecaf98d1fa30d2494d22d51a672b81a529543de5cf20d8eb56463150dea733",
+    "scripts/formal_scoring.py": "38b2d3d4b5fafd409f9d2d55e0a26efa983994255c3e035de3387cef7726e839",
+    "scripts/formal_states.py": "903c9324859d3f51e8ba0c78b9d0e2eb687cbc458da93b018f3d5611098b44b5",
+    "scripts/host_adapters.py": "71ce3924438e9244091889321b21e77b692c77dbc95249be5258a8f1a50a50ea",
+    "scripts/host_receipts.py": "46fb0c3d8901149326fe28598ba38aaadc0db1e03ea0a494d4427cee3a9a3fad",
+    "scripts/input_safety.py": "78142ebb651e970609e73814995e91439073f76c18ad2710b87d6722bf80c6e1",
+    "scripts/manage_run_state.py": "b8181d9e2dcb8b2f46ed371396a1fc3ef769ebfdc8ef36bc8dd46079805cf6ab",
+    "scripts/page_views.py": "8b7ae14aa7b7ab50ecfb62d03ff6e2bb75e73b6fd1ecf7f934d806600e4c33e4",
+    "scripts/pre_admission_audit.py": "e94b55efdc7f569ff801b3988e95fff919fadfe664f793d4552575ff6280c0a3",
+    "scripts/preflight_validate.py": "60a1f2554ebfbd44131f3a0e49ff4b8cffa870c287a2a064ed9b661b3d7a5f92",
+    "scripts/prepare_host_input.py": "69a3c2517d1f6521a197c75d60d769e31b5520714119c8918fa160b89d40849e",
+    "scripts/private_artifacts.py": "f3971505711f062cf97de65def6c96e2122124027fb67562a87618ecda16a668",
+    "scripts/process_lock.py": "ffe56ca6f66bf893727854d70fdf1b267c8844fc74174669fd3b0c6bef611c6c",
+    "scripts/protected_runtime.py": "4aec0261746696d7fd726fa77f22f3587b0d8eeaf7f4c204627cf97fa4228585",
+    "scripts/public_network.py": "1ad58a0ce9ea8f6fc48052b91f072f1a019bf5ff5885ed15a9349b9f7fe88e69",
+    "scripts/quantify_text_semantics.py": "4de60a1ddb3b7bd30f30bd894af4ad3f43428af86771b4a93ff8e8d237780e70",
+    "scripts/reachability.py": "e98bf7fe33047f078fb6bf68cd6a24650a67f2e61dd9cbc6c79fe307b9f85c7c",
+    "scripts/refresh_search_log.py": "2d5838b4e80f148b603f31a36374f52c53c24eb4d4cdc4e64540cb78e3b95973",
+    "scripts/retrieval_controls.py": "d81e7b0dc171f3699dc7f1b2057b011f546ba85dac7462bab019ed2cc77e60a9",
+    "scripts/review_trust.py": "137fb00d66bf94117cedadabd487d8b6965bee9ae7acbe1dac130eaddd9fc246",
+    "scripts/run_paths.py": "82bbe0d5edbf773ea4715e2af39be4cb89192715e9adab4e1df5b58a991b1468",
+    "scripts/run_research.py": "8894e9a617ee3f230fc8703cd7b566ecda94a79d71240bd96ed48a7575cb10a9",
+    "scripts/runtime_dispatch.py": "f38713208db30b1092fcec7f4c8d9e747e01c51fc2a6abfe0254d0435a8a0144",
+    "scripts/runtime_guard.py": "4908f6dfaee40d2915ac6aec11bf6323abc2f4efcf5bb641ca2094a0c09ccad9",
+    "scripts/source_capture.py": "324b6131d3a65b27620a2779c04c04aa0ba59fb3980abc91acbaea4ba19d70b3",
+    "scripts/source_identity.py": "66ba705aa446b93e509ff96addd777fb01738f19f91506b6f025d8695d711b4c",
+    "scripts/spreadsheet_safety.py": "5a5a62e33218c3f0dacc87e17c14cfa115293ee1210ae7ff3ad6cd952566fbbd",
+    "scripts/storage_contract.py": "16b906e02343151f3faca3b6be29541e9d887dbeb0d553875b48ad08950c0e58",
+    "scripts/strict_json.py": "dc4de053a80adfd950d04b28ad7a5089ddf9a5a56b7652fda07d38169b457ea2",
+    "scripts/temporal_fields.py": "e8a02fc9ae95679aa73377e548fb33199d4f509c49b51caeda0c132e0f4ad660",
+    "scripts/tool_batch.py": "0187ff9644b9c08a6be14ab4c744105b9f5a47b9c9f22d19764c73729ae0e125",
+    "scripts/tool_response_artifacts.py": "20a429e1f0e4c42cceaa105fbce1f940a1c01dfe46722dd17b356b40bf7088f6",
+    "scripts/validate_deliverables.py": "e8e88b9c24ae948d9dfe2f104492e0d8e6dd305e347253ca710007ad96d0ebfa",
+    "scripts/validation_repair_plan.py": "c5f4aa94c70f91980dad64d50fe96e706f40bf96f3de91c8737ef4b24ad9478e",
+    "scripts/workflow_errors.py": "a2bdf1265d92c246e29144018706132cecd7080dbd49c501966732fcd9f1034a"
+  },
+  "snapshot_sha256": "da378a3dde9d14330919f8c5cc936710806ab2bca57fbee53d9ded2a7f5c7f72",
+  "dependency_contract": {
+    "path": "requirements.txt",
+    "sha256": "958dd29cd7fd9ea26276596806feabe1277b6b0119777cfd215bd154cd16cb61",
+    "bytes": 84,
+    "required_dependencies": [
+      "XlsxWriter==3.2.9",
+      "cryptography==50.0.1",
+      "idna==3.10",
+      "python-docx==1.2.0",
+      "tzdata==2026.3"
+    ]
+  },
+  "approved_writer_registry": {
+    "execution_facts.py": {
+      "relative_path": "scripts/execution_facts.py",
+      "sha256": "c6f976755b2997e2e430f9ec35f3facc4541da4a1510bc310920a6f1c5136b2a",
+      "phase_roles": {
+        "SEARCH": [
+          "execution_events",
+          "search_log"
+        ]
+      }
+    },
+    "artifact_provenance.py": {
+      "relative_path": "scripts/artifact_provenance.py",
+      "sha256": "42bc86393b31f221022557b86a9e723c0fb699ebe66534116967e3253df69899",
+      "phase_roles": {
+        "SEARCH": [
+          "search_log"
+        ],
+        "EVIDENCE_AUDIT": [
+          "truth_freeze"
+        ],
+        "SCORE": [
+          "score_gate",
+          "truth_freeze"
+        ],
+        "REPORT_BUILD": [
+          "limitations"
+        ],
+        "VALIDATE": [
+          "delivery_provenance"
+        ]
+      }
+    },
+    "source_capture.py": {
+      "relative_path": "scripts/source_capture.py",
+      "sha256": "324b6131d3a65b27620a2779c04c04aa0ba59fb3980abc91acbaea4ba19d70b3",
+      "phase_roles": {
+        "SEARCH": [
+          "source_capture_manifest",
+          "tool_response_artifact"
+        ]
+      }
+    },
+    "pre_admission_audit.py": {
+      "relative_path": "scripts/pre_admission_audit.py",
+      "sha256": "e94b55efdc7f569ff801b3988e95fff919fadfe664f793d4552575ff6280c0a3",
+      "phase_roles": {
+        "EVIDENCE_BUILD": [
+          "canonical_evidence_ledger",
+          "canonical_source_ledger",
+          "collision_audit",
+          "correction_event_ledger",
+          "locator_audit",
+          "pre_admission_audit",
+          "raw_evidence",
+          "source_ledger"
+        ]
+      }
+    },
+    "canonical_correction.py": {
+      "relative_path": "scripts/canonical_correction.py",
+      "sha256": "685c795fc6989486d2fa51341f7d48d5b89d18454e3addf6da94e8219667c2f9",
+      "phase_roles": {
+        "EVIDENCE_BUILD": [
+          "collision_audit",
+          "correction_event_ledger",
+          "locator_audit",
+          "pre_admission_audit",
+          "raw_evidence",
+          "source_ledger"
+        ]
+      }
+    },
+    "refresh_search_log.py": {
+      "relative_path": "scripts/refresh_search_log.py",
+      "sha256": "2d5838b4e80f148b603f31a36374f52c53c24eb4d4cdc4e64540cb78e3b95973",
+      "phase_roles": {
+        "SEMANTIC_QUANTIFICATION": [
+          "search_log"
+        ]
+      }
+    },
+    "apply_review_changes.py": {
+      "relative_path": "scripts/apply_review_changes.py",
+      "sha256": "64bbac22683eb6e6000f263b697dcb02f7176013a8f13ee61301c3c50644b727",
+      "phase_roles": {
+        "SEMANTIC_QUANTIFICATION": [
+          "review_change_ledger",
+          "reviewed_evidence"
+        ]
+      }
+    },
+    "quantify_text_semantics.py": {
+      "relative_path": "scripts/quantify_text_semantics.py",
+      "sha256": "4de60a1ddb3b7bd30f30bd894af4ad3f43428af86771b4a93ff8e8d237780e70",
+      "phase_roles": {
+        "SEMANTIC_QUANTIFICATION": [
+          "coding_queue",
+          "formal_evidence",
+          "semantic_audit",
+          "semantic_evidence"
+        ],
+        "SCORE": [
+          "coding_queue",
+          "formal_evidence",
+          "platform_scores",
+          "semantic_audit"
+        ]
+      }
+    },
+    "audit_evidence.py": {
+      "relative_path": "scripts/audit_evidence.py",
+      "sha256": "109f871e7d527d5c22ddef8fdc083bc1faeb2d3589514c4f3c52d7af52291d1a",
+      "phase_roles": {
+        "EVIDENCE_AUDIT": [
+          "evidence_audit"
+        ]
+      }
+    },
+    "calculate_scores.py": {
+      "relative_path": "scripts/calculate_scores.py",
+      "sha256": "c57bf7445280345bea2e555f0afbe9a7f1efa5578b8e04ca589fb9d40ec2789e",
+      "phase_roles": {
+        "SCORE": [
+          "scoring_output"
+        ]
+      }
+    },
+    "preflight_validate.py": {
+      "relative_path": "scripts/preflight_validate.py",
+      "sha256": "60a1f2554ebfbd44131f3a0e49ff4b8cffa870c287a2a064ed9b661b3d7a5f92",
+      "phase_roles": {
+        "SCORE": [
+          "preflight_report"
+        ]
+      }
+    },
+    "compile_report_truth.py": {
+      "relative_path": "scripts/compile_report_truth.py",
+      "sha256": "7a60cfcacd23ce5ac967b546b56ed720811f43f8def50c696562dbd643c1f0c9",
+      "phase_roles": {
+        "SCORE": [
+          "report_truth"
+        ]
+      }
+    },
+    "assemble_report_data.py": {
+      "relative_path": "scripts/assemble_report_data.py",
+      "sha256": "4eee4e9e005604ec1816fd196fb48b52304b2f4893a5869800229278e7231f03",
+      "phase_roles": {
+        "REPORT_BUILD": [
+          "report_data",
+          "report_narrative"
+        ]
+      }
+    },
+    "build_research_workbook.py": {
+      "relative_path": "scripts/build_research_workbook.py",
+      "sha256": "2b14c50ebf4552eec5fe2f63476a6c5698a5c5f730f7a7a1da1be936a2e964cd",
+      "phase_roles": {
+        "REPORT_BUILD": [
+          "research_workbook"
+        ]
+      }
+    },
+    "build_semantic_rules_workbook.py": {
+      "relative_path": "scripts/build_semantic_rules_workbook.py",
+      "sha256": "2fbe4e5452664afb78777fcded49e2c8fdf7d0b396dd82d95893c3446fb623bc",
+      "phase_roles": {
+        "REPORT_BUILD": [
+          "rules_workbook"
+        ]
+      }
+    },
+    "build_docx_report.py": {
+      "relative_path": "scripts/build_docx_report.py",
+      "sha256": "37b86a1833f6d000623abe9725f0c3e1fbfcc6b3a20eb8e5ea6078585c46878e",
+      "phase_roles": {
+        "REPORT_BUILD": [
+          "docx_report"
+        ]
+      }
+    },
+    "validate_deliverables.py": {
+      "relative_path": "scripts/validate_deliverables.py",
+      "sha256": "e8e88b9c24ae948d9dfe2f104492e0d8e6dd305e347253ca710007ad96d0ebfa",
+      "phase_roles": {
+        "VALIDATE": [
+          "validation_error_manifest",
+          "validation_report"
+        ]
+      }
+    },
+    "manage_run_state.py": {
+      "relative_path": "scripts/manage_run_state.py",
+      "sha256": "b8181d9e2dcb8b2f46ed371396a1fc3ef769ebfdc8ef36bc8dd46079805cf6ab",
+      "phase_roles": {
+        "DELIVER": [
+          "delivery_provenance"
+        ]
+      }
+    },
+    "run_research.py": {
+      "relative_path": "scripts/run_research.py",
+      "sha256": "8894e9a617ee3f230fc8703cd7b566ecda94a79d71240bd96ed48a7575cb10a9",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "action_dispatch.py": {
+      "relative_path": "scripts/action_dispatch.py",
+      "sha256": "36ff972003bedbb4e1f2e3f37861877d3a5603ff918b98c256727304d963de3d",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "batch_pipeline.py": {
+      "relative_path": "scripts/batch_pipeline.py",
+      "sha256": "1cc0374b9520531443717026b9f34191b8c92fbf9a100cf8207961a9335f6b48",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "tool_batch.py": {
+      "relative_path": "scripts/tool_batch.py",
+      "sha256": "0187ff9644b9c08a6be14ab4c744105b9f5a47b9c9f22d19764c73729ae0e125",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "runtime_dispatch.py": {
+      "relative_path": "scripts/runtime_dispatch.py",
+      "sha256": "f38713208db30b1092fcec7f4c8d9e747e01c51fc2a6abfe0254d0435a8a0144",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "prepare_host_input.py": {
+      "relative_path": "scripts/prepare_host_input.py",
+      "sha256": "69a3c2517d1f6521a197c75d60d769e31b5520714119c8918fa160b89d40849e",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "protected_runtime.py": {
+      "relative_path": "scripts/protected_runtime.py",
+      "sha256": "4aec0261746696d7fd726fa77f22f3587b0d8eeaf7f4c204627cf97fa4228585",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    },
+    "cost_metrics.py": {
+      "relative_path": "scripts/cost_metrics.py",
+      "sha256": "fcf99418491050160ca46ec6ab9b8fa26dab91138ed169837773ae21a1438d47",
+      "phase_roles": {
+        "INITIALIZE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEARCH": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SEMANTIC_QUANTIFICATION": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "EVIDENCE_AUDIT": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "SCORE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "REPORT_BUILD": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "VALIDATE": [
+          "operational_checkpoint",
+          "operational_intent"
+        ],
+        "DELIVER": [
+          "operational_checkpoint",
+          "operational_intent"
+        ]
+      }
+    }
+  }
+}
