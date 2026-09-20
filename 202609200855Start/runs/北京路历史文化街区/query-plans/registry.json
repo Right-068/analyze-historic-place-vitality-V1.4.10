@@ -1,0 +1,14 @@
+{
+  "plans": [
+    {
+      "binding_file": "bindings/7865d4d857805878d6fd204ecc6400bbb518d47ef22f7318479d2665267a56b3.json",
+      "binding_sha256": "7865d4d857805878d6fd204ecc6400bbb518d47ef22f7318479d2665267a56b3",
+      "plan_file": "plans/756c3664ffdfd39fbf0ef3e6eb5dff40f2bb5b0e5d738f3b80372336cc975ce1.csv",
+      "plan_id": "PLAN-b8e3d1cc70006201b7270b6d",
+      "plan_sha256": "756c3664ffdfd39fbf0ef3e6eb5dff40f2bb5b0e5d738f3b80372336cc975ce1",
+      "registered_at": "2026-09-20T01:13:08.456849+00:00"
+    }
+  ],
+  "schema_version": "committed-query-registry-1",
+  "task_run_id": "RUN-a31a13821d1641a1996c8c85ca1a2eb7"
+}

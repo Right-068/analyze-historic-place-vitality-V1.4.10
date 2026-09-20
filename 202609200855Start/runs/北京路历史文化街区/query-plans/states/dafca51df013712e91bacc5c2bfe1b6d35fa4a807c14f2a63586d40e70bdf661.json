@@ -1,0 +1,66 @@
+{
+  "schema_revision": 6,
+  "task_run_id": "RUN-a31a13821d1641a1996c8c85ca1a2eb7",
+  "execution_log_contract": {
+    "schema_version": "search-execution-2",
+    "legacy_compatibility": false
+  },
+  "place": "北京路历史文化街区",
+  "status": "running",
+  "phase": "INITIALIZE",
+  "state_revision": 1,
+  "audit_status": "needs_iteration",
+  "unique_pages": 0,
+  "effective_samples": 0,
+  "iteration_round": 0,
+  "minimum_dimension_confidence": "中",
+  "target_confidence": "中高",
+  "dimensions_needing_iteration": 7,
+  "validation_rounds": 0,
+  "repair_cycles": 0,
+  "pipeline_rebuilds_after_validation": 0,
+  "same_error_recurrence_max": 1,
+  "last_validation_error_codes": [],
+  "terminal_failure_code": "",
+  "last_completed_action": "created_run_state",
+  "next_action": "start_retrieval",
+  "pause_reason": "",
+  "artifacts": {},
+  "skill_root": "C:\\Users\\PC\\.dsh\\skills\\analyze-historic-place-vitality",
+  "release_manifest": "G:\\※ 2💻 Share\\Test\\202609200855Start\\runs\\.北京路历史文化街区-initializing-y4l5pygk\\release.json",
+  "approved_writer_ledger": "G:\\※ 2💻 Share\\Test\\202609200855Start\\runs\\.北京路历史文化街区-initializing-y4l5pygk\\protected_artifact_write_ledger.jsonl",
+  "detailed_log": "G:\\※ 2💻 Share\\Test\\202609200855Start\\runs\\.北京路历史文化街区-initializing-y4l5pygk\\详细运行日志_北京路历史文化街区_20260920_091306.txt",
+  "created_at": "2026-09-20T01:13:06+00:00",
+  "research_cutoff": "2026-09-20",
+  "updated_at": "2026-09-20T01:13:06+00:00",
+  "history": [
+    {
+      "at": "2026-09-20T01:13:06+00:00",
+      "event": "init",
+      "state_revision": 1,
+      "status": "running",
+      "phase": "INITIALIZE",
+      "unique_pages": 0,
+      "effective_samples": 0,
+      "iteration_round": 0,
+      "dimensions_needing_iteration": 7,
+      "next_action": "start_retrieval"
+    }
+  ],
+  "path_references": {
+    "release_manifest": {
+      "path_kind": "run_relative",
+      "logical_path": "release.json"
+    },
+    "approved_writer_ledger": {
+      "path_kind": "run_relative",
+      "logical_path": "protected_artifact_write_ledger.jsonl"
+    },
+    "detailed_log": {
+      "path_kind": "run_relative",
+      "logical_path": "详细运行日志_北京路历史文化街区_20260920_091306.txt"
+    },
+    "artifacts": {}
+  },
+  "run_root_schema": "run-relative-1"
+}
